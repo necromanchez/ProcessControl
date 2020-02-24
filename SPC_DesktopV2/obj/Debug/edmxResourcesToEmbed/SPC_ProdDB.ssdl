@@ -1,0 +1,2502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SPI_SPCSDB_ProdModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cMCS">
+    <Key>
+      <PropertyRef Name="MCSID" />
+    </Key>
+    <Property Name="MCSID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DrawingCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="RevNo" Type="int" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsRejected" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cMCSFG">
+    <Key>
+      <PropertyRef Name="MCSFGID" />
+    </Key>
+    <Property Name="MCSFGID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="MCSID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="300" />
+    <Property Name="NominalValue" Type="varchar" MaxLength="300" />
+    <Property Name="CTQMin" Type="varchar" MaxLength="300" />
+    <Property Name="CTQMax" Type="varchar" MaxLength="300" />
+    <Property Name="Min" Type="varchar" MaxLength="10" />
+    <Property Name="Max" Type="varchar" MaxLength="10" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" />
+    <Property Name="Method" Type="varchar" MaxLength="300" />
+    <Property Name="CTQ" Type="varchar" MaxLength="10" />
+    <Property Name="DataType" Type="varchar" MaxLength="20" />
+    <Property Name="InspectionStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Process" Type="varchar" MaxLength="300" />
+    <Property Name="Remark" Type="varchar" MaxLength="300" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="300" />
+    <Property Name="PartCode" Type="varchar" MaxLength="300" />
+    <Property Name="InspectionData" Type="varchar" MaxLength="50" />
+    <Property Name="Calculation" Type="varchar" MaxLength="300" />
+    <Property Name="MPCNo" Type="int" Nullable="false" />
+    <Property Name="MPCCriteria" Type="varchar" MaxLength="10" />
+    <Property Name="SidePosition" Type="varchar" MaxLength="300" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="300" />
+    <Property Name="CodeName" Type="varchar" MaxLength="300" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="cMCSSP">
+    <Key>
+      <PropertyRef Name="MCSSPID" />
+    </Key>
+    <Property Name="MCSSPID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="MCSID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="NominalValue" Type="varchar" MaxLength="300" />
+    <Property Name="LowerTOL" Type="varchar" MaxLength="300" />
+    <Property Name="UpperTOL" Type="varchar" MaxLength="300" />
+    <Property Name="Min" Type="varchar" MaxLength="10" />
+    <Property Name="Max" Type="varchar" MaxLength="10" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" />
+    <Property Name="Method" Type="varchar" MaxLength="300" />
+    <Property Name="CTQ" Type="varchar" MaxLength="10" />
+    <Property Name="DataType" Type="varchar" MaxLength="20" />
+    <Property Name="InspectionStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Process" Type="varchar" MaxLength="300" />
+    <Property Name="Remark" Type="varchar" MaxLength="300" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="25" />
+    <Property Name="InspectionData" Type="varchar" MaxLength="50" />
+    <Property Name="Calculation" Type="varchar" MaxLength="300" />
+    <Property Name="MPCNo" Type="int" Nullable="false" />
+    <Property Name="MPCCriteria" Type="varchar" MaxLength="10" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="iInspectionDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InspectionItemId" Type="bigint" />
+    <Property Name="CheckItemNo" Type="varchar" MaxLength="100" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
+    <Property Name="Data" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="Judgement" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IsPartial" Type="bit" Nullable="false" />
+    <Property Name="IsFinished" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iInspectionItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MCSID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MCSChildID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="Stage" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="IsSAC" Type="bit" Nullable="false" />
+    <Property Name="SACLSL" Type="varchar" MaxLength="300" />
+    <Property Name="SACUSL" Type="varchar" MaxLength="300" />
+    <Property Name="SACQty" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SACQtyUsed" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SACStart" Type="datetime" Nullable="false" />
+    <Property Name="SACEnd" Type="datetime" Nullable="false" />
+    <Property Name="SACNumber" Type="varchar" MaxLength="100" />
+    <Property Name="CTQ" Type="varchar" MaxLength="10" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="LotNo" Type="varchar" MaxLength="90" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" />
+    <Property Name="SamplingSize" Type="int" Nullable="false" />
+    <Property Name="OverallJudgement" Type="varchar" MaxLength="10" />
+    <Property Name="InspectorRemark" Type="varchar" MaxLength="300" />
+    <Property Name="IsPartial" Type="bit" Nullable="false" />
+    <Property Name="IsFinished" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SPI_SPCSDB_Prod.dbo.InspDetailOLDDB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InspDetailOLDDB">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Sequence" />
+      <PropertyRef Name="Data" />
+      <PropertyRef Name="Judgement" />
+      <PropertyRef Name="IsPartial" />
+      <PropertyRef Name="IsFinished" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="RegisterID" />
+      <PropertyRef Name="RegisterPG" />
+      <PropertyRef Name="RegisterDate" />
+      <PropertyRef Name="UpdateID" />
+      <PropertyRef Name="UpdatePG" />
+      <PropertyRef Name="UpdateDate" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InspectionItemId" Type="varchar" MaxLength="300" />
+    <Property Name="CheckItemNo" Type="varchar" MaxLength="100" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
+    <Property Name="Data" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="Judgement" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IsPartial" Type="bit" Nullable="false" />
+    <Property Name="IsFinished" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SPI_SPCSDB_Prod.dbo.InspItemOLDDB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InspItemOLDDB">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="MCSID" />
+      <PropertyRef Name="MCSChildID" />
+      <PropertyRef Name="CheckItem" />
+      <PropertyRef Name="Stage" />
+      <PropertyRef Name="SAPCode" />
+      <PropertyRef Name="IsSAC" />
+      <PropertyRef Name="SACQty" />
+      <PropertyRef Name="SACQtyUsed" />
+      <PropertyRef Name="SACStart" />
+      <PropertyRef Name="SACEnd" />
+      <PropertyRef Name="Qty" />
+      <PropertyRef Name="SamplingSize" />
+      <PropertyRef Name="IsPartial" />
+      <PropertyRef Name="IsFinished" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="RegisterID" />
+      <PropertyRef Name="RegisterPG" />
+      <PropertyRef Name="RegisterDate" />
+      <PropertyRef Name="UpdateID" />
+      <PropertyRef Name="UpdatePG" />
+      <PropertyRef Name="UpdateDate" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocalID" Type="varchar" MaxLength="300" />
+    <Property Name="MCSID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MCSChildID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="Stage" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="IsSAC" Type="bit" Nullable="false" />
+    <Property Name="SACLSL" Type="varchar" MaxLength="300" />
+    <Property Name="SACUSL" Type="varchar" MaxLength="300" />
+    <Property Name="SACQty" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SACQtyUsed" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SACStart" Type="datetime" Nullable="false" />
+    <Property Name="SACEnd" Type="datetime" Nullable="false" />
+    <Property Name="SACNumber" Type="varchar" MaxLength="100" />
+    <Property Name="CTQ" Type="varchar" MaxLength="10" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="LotNo" Type="varchar" MaxLength="90" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" />
+    <Property Name="SamplingSize" Type="int" Nullable="false" />
+    <Property Name="OverallJudgement" Type="varchar" MaxLength="10" />
+    <Property Name="InspectorRemark" Type="varchar" MaxLength="300" />
+    <Property Name="IsPartial" Type="bit" Nullable="false" />
+    <Property Name="IsFinished" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mCode">
+    <Key>
+      <PropertyRef Name="CodeID" />
+    </Key>
+    <Property Name="CodeID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CodeType" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="CodeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CodeDescription" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="CodePath" Type="varchar" MaxLength="300" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mImage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image_URL" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SPI_SPCSDB_Prod.dbo.mImageSAC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="mImageSAC">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Image_URL" />
+      <PropertyRef Name="FileName" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image_URL" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="SACRef" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="mInspectionMethod">
+    <Key>
+      <PropertyRef Name="IMID" />
+    </Key>
+    <Property Name="IMID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IMCode" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="IMName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mInstrument">
+    <Key>
+      <PropertyRef Name="InstrumentID" />
+    </Key>
+    <Property Name="InstrumentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstrumentCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="InstrumentName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TerminalID" Type="bigint" Nullable="false" />
+    <Property Name="USBPort" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mMailRecipient">
+    <Key>
+      <PropertyRef Name="MRID" />
+    </Key>
+    <Property Name="MRID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MRName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MREmail" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="NewMCS" Type="bit" Nullable="false" />
+    <Property Name="RevisedMCS" Type="bit" Nullable="false" />
+    <Property Name="ApprovedNew" Type="bit" Nullable="false" />
+    <Property Name="RejectedNew" Type="bit" Nullable="false" />
+    <Property Name="ApprovedRevised" Type="bit" Nullable="false" />
+    <Property Name="RejectedRevised" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mMailSetting">
+    <Key>
+      <PropertyRef Name="MailSettingID" />
+    </Key>
+    <Property Name="MailSettingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Host" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Port" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NewMCSMsg" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="RevisedMCSMsg" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ApprovedNewMCSMsg" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ApprovedRevisedMCSMsg" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="RejectedNewMCSMsg" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="RejectedRevisedMCSMsg" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mProcess">
+    <Key>
+      <PropertyRef Name="ProcessID" />
+    </Key>
+    <Property Name="ProcessID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProcessCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProcessName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mProduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mSampling">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LotSizeLower" Type="int" Nullable="false" />
+    <Property Name="LotSizeUpper" Type="int" Nullable="false" />
+    <Property Name="Dimension" Type="int" Nullable="false" />
+    <Property Name="Visual" Type="int" Nullable="false" />
+    <Property Name="UOM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Level" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Sample" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SampleSize" Type="int" Nullable="false" />
+    <Property Name="AccmSampleSize" Type="int" Nullable="false" />
+    <Property Name="QANC" Type="int" Nullable="false" />
+    <Property Name="QAAC" Type="int" Nullable="false" />
+    <Property Name="IsBoth" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mSinglePart">
+    <Key>
+      <PropertyRef Name="SPID" />
+    </Key>
+    <Property Name="SPID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SPCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mSupplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierCode" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="SupplierName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SupplierEmail" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mTerminal">
+    <Key>
+      <PropertyRef Name="TerminalID" />
+    </Key>
+    <Property Name="TerminalID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TerminalCode" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="TerminalName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TerminalSection" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="28" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="UserAccess" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MGTModule" Type="bit" Nullable="false" />
+    <Property Name="MCSModule" Type="bit" Nullable="false" />
+    <Property Name="INSModule" Type="bit" Nullable="false" />
+    <Property Name="RPTModule" Type="bit" Nullable="false" />
+    <Property Name="Incomplete_Inspection" Type="bit" />
+    <Property Name="Can_Approved" Type="bit" />
+    <Property Name="Can_Request" Type="bit" />
+    <Property Name="LoginAttempts" Type="int" Nullable="false" />
+    <Property Name="IsLocked" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rDaily">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Process" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Stage" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cpk" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="Date" Type="datetime2" Precision="3" Nullable="false" />
+    <Property Name="Week" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rMonthly">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Process" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Stage" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cpk" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rWeekly">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Process" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Stage" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cpk" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="Week" Type="int" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rYearly">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Process" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Stage" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Supplier" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cpk" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SPI_SPCSDB_Prod.dbo.SAC_BlankData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SAC_BlankData">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RefNo" />
+      <PropertyRef Name="ChildID" />
+      <PropertyRef Name="Data" />
+      <PropertyRef Name="RegisterID" />
+      <PropertyRef Name="RegisterPG" />
+      <PropertyRef Name="RegisterDate" />
+      <PropertyRef Name="UpdateID" />
+      <PropertyRef Name="UpdatePG" />
+      <PropertyRef Name="UpdateDate" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RefNo" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="ChildID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Data" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SPI_SPCSDB_Prod.dbo.SACApproval' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SACApproval">
+    <Key>
+      <PropertyRef Name="AccumulatedQTY" />
+      <PropertyRef Name="ReasonOfNC" />
+      <PropertyRef Name="RegisterID" />
+      <PropertyRef Name="RegisterPG" />
+      <PropertyRef Name="RegisterDate" />
+      <PropertyRef Name="UpdateID" />
+      <PropertyRef Name="UpdatePG" />
+      <PropertyRef Name="UpdateDate" />
+    </Key>
+    <Property Name="cMSCSPFG" Type="varchar" MaxLength="200" />
+    <Property Name="LotNo" Type="varchar" MaxLength="200" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="200" />
+    <Property Name="RefNo" Type="varchar" MaxLength="200" />
+    <Property Name="PICK" Type="bit" />
+    <Property Name="AlreadyProduce" Type="int" />
+    <Property Name="Product" Type="varchar" MaxLength="200" />
+    <Property Name="Process" Type="varchar" MaxLength="200" />
+    <Property Name="PartName" Type="varchar" MaxLength="200" />
+    <Property Name="Proposed_Quantity" Type="int" />
+    <Property Name="Progress" Type="varchar" MaxLength="200" />
+    <Property Name="Type" Type="varchar" MaxLength="200" />
+    <Property Name="EffectivityDateFrom" Type="varchar" MaxLength="200" />
+    <Property Name="EffectivityDateTo" Type="varchar" MaxLength="200" />
+    <Property Name="SAC_Status" Type="varchar" MaxLength="200" />
+    <Property Name="CommonPartOverseaFactory" Type="bit" />
+    <Property Name="CommonPartOverseaFactory_Name" Type="varchar" MaxLength="200" />
+    <Property Name="AccumulatedQTY" Type="int" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="200" />
+    <Property Name="Initiator" Type="varchar" MaxLength="200" />
+    <Property Name="Manager" Type="varchar" MaxLength="200" />
+    <Property Name="Supervisor" Type="varchar" MaxLength="200" />
+    <Property Name="Requestor" Type="varchar" MaxLength="200" />
+    <Property Name="Image" Type="varchar" MaxLength="200" />
+    <Property Name="Repeated_no" Type="int" />
+    <Property Name="Approved_By" Type="bit" />
+    <Property Name="Appearance" Type="bit" />
+    <Property Name="Function" Type="bit" />
+    <Property Name="NC_Ratio" Type="varchar" MaxLength="200" />
+    <Property Name="Detected_by" Type="varchar" MaxLength="200" />
+    <Property Name="TypeofDefect" Type="varchar" MaxLength="200" />
+    <Property Name="MCSChildID" Type="varchar" MaxLength="200" />
+    <Property Name="CNC" Type="varchar" MaxLength="200" />
+    <Property Name="DamagesType" Type="varchar" MaxLength="200" />
+    <Property Name="SACUSL" Type="varchar" MaxLength="20" />
+    <Property Name="SACLSL" Type="varchar" MaxLength="20" />
+    <Property Name="ReasonOfNC" Type="varchar(max)" Nullable="false" />
+    <Property Name="CorrectiveAction" Type="varchar(max)" />
+    <Property Name="CorrectiveSchedule" Type="varchar" MaxLength="200" />
+    <Property Name="PIC" Type="varchar" MaxLength="200" />
+    <Property Name="ProcessFlow" Type="varchar" MaxLength="200" />
+    <Property Name="President" Type="bit" />
+    <Property Name="VPPresident" Type="bit" />
+    <Property Name="Production" Type="varchar" MaxLength="200" />
+    <Property Name="PDA" Type="bit" />
+    <Property Name="PCD" Type="bit" />
+    <Property Name="Logistics" Type="bit" />
+    <Property Name="PE" Type="varchar" MaxLength="200" />
+    <Property Name="QC" Type="bit" />
+    <Property Name="SIC_QD" Type="bit" />
+    <Property Name="SIC_QA" Type="bit" />
+    <Property Name="SIC_As" Type="bit" />
+    <Property Name="SSF" Type="bit" />
+    <Property Name="SPL_SBM" Type="bit" />
+    <Property Name="SCRS" Type="bit" />
+    <Property Name="SKC" Type="bit" />
+    <Property Name="SCM" Type="bit" />
+    <Property Name="SACCategory" Type="varchar" MaxLength="200" />
+    <Property Name="SPCQC_Reason" Type="varchar" MaxLength="200" />
+    <Property Name="Judgement" Type="varchar" MaxLength="200" />
+    <Property Name="QuantityAgreed" Type="int" />
+    <Property Name="EffectiveDate" Type="varchar" MaxLength="50" />
+    <Property Name="ExpirationDate" Type="varchar" MaxLength="50" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tCoefficient">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="N" Type="int" Nullable="false" />
+    <Property Name="A2" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="D3" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="D4" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="B3" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="B4" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="C4" Type="decimal" Precision="18" Scale="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SPI_SPCSDB_Prod.dbo.temptable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="temptable">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="MCSSPID" />
+      <PropertyRef Name="MCSID" />
+      <PropertyRef Name="No" />
+      <PropertyRef Name="MPCNo" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Rejected" />
+      <PropertyRef Name="RegisterID" />
+      <PropertyRef Name="RegisterPG" />
+      <PropertyRef Name="RegisterDate" />
+      <PropertyRef Name="UpdateID" />
+      <PropertyRef Name="UpdatePG" />
+      <PropertyRef Name="UpdateDate" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MCSSPID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="MCSID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="300" />
+    <Property Name="NominalValue" Type="varchar" MaxLength="300" />
+    <Property Name="LowerTOL" Type="varchar" MaxLength="300" />
+    <Property Name="UpperTOL" Type="varchar" MaxLength="300" />
+    <Property Name="Min" Type="varchar" MaxLength="10" />
+    <Property Name="Max" Type="varchar" MaxLength="10" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" />
+    <Property Name="Method" Type="varchar" MaxLength="300" />
+    <Property Name="CTQ" Type="varchar" MaxLength="10" />
+    <Property Name="DataType" Type="varchar" MaxLength="20" />
+    <Property Name="InspectionStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Process" Type="varchar" MaxLength="300" />
+    <Property Name="Remark" Type="varchar" MaxLength="300" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="25" />
+    <Property Name="InspectionData" Type="varchar" MaxLength="50" />
+    <Property Name="Calculation" Type="varchar" MaxLength="300" />
+    <Property Name="MPCNo" Type="int" Nullable="false" />
+    <Property Name="MPCCriteria" Type="varchar" MaxLength="10" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="EditedColumns" Type="varchar" MaxLength="255" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Rejected" Type="bit" Nullable="false" />
+    <Property Name="RejectRemark" Type="varchar" MaxLength="500" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tSigmaTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ncpu" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="ncpmo" Type="bigint" Nullable="false" />
+    <Property Name="sigma" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Activity" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xMCSFGLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MCSFGID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="MCSID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="300" />
+    <Property Name="NominalValue" Type="varchar" MaxLength="300" />
+    <Property Name="CTQMin" Type="varchar" MaxLength="300" />
+    <Property Name="CTQMax" Type="varchar" MaxLength="300" />
+    <Property Name="Min" Type="varchar" MaxLength="10" />
+    <Property Name="Max" Type="varchar" MaxLength="10" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" />
+    <Property Name="Method" Type="varchar" MaxLength="300" />
+    <Property Name="CTQ" Type="varchar" MaxLength="10" />
+    <Property Name="DataType" Type="varchar" MaxLength="20" />
+    <Property Name="InspectionStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Process" Type="varchar" MaxLength="300" />
+    <Property Name="Remark" Type="varchar" MaxLength="300" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="300" />
+    <Property Name="InspectionData" Type="varchar" MaxLength="50" />
+    <Property Name="Calculation" Type="varchar" MaxLength="300" />
+    <Property Name="MPCNo" Type="int" Nullable="false" />
+    <Property Name="MPCCriteria" Type="varchar" MaxLength="10" />
+    <Property Name="SidePosition" Type="varchar" MaxLength="300" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="300" />
+    <Property Name="CodeName" Type="varchar" MaxLength="300" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="EditedColumns" Type="varchar" MaxLength="255" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Rejected" Type="bit" Nullable="false" />
+    <Property Name="RejectRemark" Type="varchar" MaxLength="500" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="xMCSLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MCSID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DrawingCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="RevNo" Type="int" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsRejected" Type="bit" Nullable="false" />
+    <Property Name="RejectRemark" Type="varchar" MaxLength="500" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xMCSSPLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MCSSPID" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="MCSID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CheckItem" Type="varchar" MaxLength="300" />
+    <Property Name="NominalValue" Type="varchar" MaxLength="300" />
+    <Property Name="LowerTOL" Type="varchar" MaxLength="300" />
+    <Property Name="UpperTOL" Type="varchar" MaxLength="300" />
+    <Property Name="Min" Type="varchar" MaxLength="10" />
+    <Property Name="Max" Type="varchar" MaxLength="10" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" />
+    <Property Name="Method" Type="varchar" MaxLength="300" />
+    <Property Name="CTQ" Type="varchar" MaxLength="10" />
+    <Property Name="DataType" Type="varchar" MaxLength="20" />
+    <Property Name="InspectionStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Process" Type="varchar" MaxLength="300" />
+    <Property Name="Remark" Type="varchar" MaxLength="300" />
+    <Property Name="SAPCode" Type="varchar" MaxLength="25" />
+    <Property Name="InspectionData" Type="varchar" MaxLength="50" />
+    <Property Name="Calculation" Type="varchar" MaxLength="300" />
+    <Property Name="MPCNo" Type="int" Nullable="false" />
+    <Property Name="MPCCriteria" Type="varchar" MaxLength="10" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="EditedColumns" Type="varchar" MaxLength="255" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Rejected" Type="bit" Nullable="false" />
+    <Property Name="RejectRemark" Type="varchar" MaxLength="500" />
+    <Property Name="RegisterID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterPG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdatePG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="xNCMailLogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MCSID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MCSChildID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InspectionItemID" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SAPCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LotNo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="OverAllJudgement" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsEmailSent" Type="bit" Nullable="false" />
+    <Property Name="RecordDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SPI_SPCSDB_Prod.dbo.xNCMailTextLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="xNCMailTextLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TextEmail" Type="text" />
+    <Property Name="ResultMsg" Type="nvarchar" MaxLength="100" />
+    <Property Name="SqlQuery" Type="nvarchar(max)" />
+    <Property Name="SqlMessage" Type="text" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <Function Name="COMPUTE_MonthlyCpkNCCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TypeVar" Type="varchar" Mode="In" />
+    <Parameter Name="ProdCode" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="bigint" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="NCCountVal" Type="int" Mode="InOut" />
+    <Parameter Name="DataCountVal" Type="int" Mode="InOut" />
+    <Parameter Name="NCPUVal" Type="decimal" Mode="InOut" />
+    <Parameter Name="SigmaVal" Type="decimal" Mode="InOut" />
+  </Function>
+  <Function Name="COMPUTE_RDailyCpkValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="UT" Type="varchar" Mode="In" />
+    <Parameter Name="LT" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="CpkVal" Type="decimal" Mode="InOut" />
+  </Function>
+  <Function Name="COMPUTE_RMonthlyCpkValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="UT" Type="varchar" Mode="In" />
+    <Parameter Name="LT" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="bigint" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="CpkVal" Type="decimal" Mode="InOut" />
+  </Function>
+  <Function Name="COMPUTE_RWeeklyCpkValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="UT" Type="varchar" Mode="In" />
+    <Parameter Name="LT" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="bigint" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="Week" Type="int" Mode="In" />
+    <Parameter Name="CpkVal" Type="decimal" Mode="InOut" />
+  </Function>
+  <Function Name="COMPUTE_RYearlyCpkValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="UT" Type="varchar" Mode="In" />
+    <Parameter Name="LT" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="bigint" Mode="In" />
+    <Parameter Name="CpkVal" Type="decimal" Mode="InOut" />
+  </Function>
+  <Function Name="DEL_MCS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCSID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="PGCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Is_Deleted" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="DEL_MCSFG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCSFGID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="PGCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Is_Deleted" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="DEL_MCSSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCSSPID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="PGCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Is_Deleted" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="DEL_UnfinishedLot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Lot" Type="nvarchar" Mode="In" />
+    <Parameter Name="Sapcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Email_NCJudgementUponSubmit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="FN_DailyQualityReportHasRows" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="period" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDay" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="FN_MonthlyQualityReportHasRows" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="periodFrom" Type="int" Mode="In" />
+    <Parameter Name="periodTo" Type="int" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="fnSplitString" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="string" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="delimiter" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="splitdata" Type="nvarchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GET_CCSDashboard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="LotNo" Type="varchar" Mode="In" />
+    <Parameter Name="Qty" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GET_CCSDashboard_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LotNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_CCSIssuance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDs" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_checkitemFiltered" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_Codes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_CodesByType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyQualityChartReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="period" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyQualityChartReportCompressed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="period" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyQualityReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="period" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyQualityTableReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="period" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyQualityTableReportCompressed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="period" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyReportChart_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="LotNo" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyReportChart_Original" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyReportCharts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyReportTable_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="LotNo" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyReportTable_Original" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_DailyReportTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_FGDATAROW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_FinishGoodNoPaginationByMCSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCSID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_GraphLimitValues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItemNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_InspectionMethods" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_Instruments" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_IPCChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_IPCChart_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="LotCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_IPCChart2_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="LotCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_IPCChart3_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="LotCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_IPCTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_IPCTable_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="LotCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_IPCTable3_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_IPCTableDetailed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Data" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_IPCTableDetailed_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Data" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_LotNoFiltered" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_LotNos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_MailRecipients" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MailSetting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MailSettingID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MailSettingDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_MailSettingID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_MCS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCS_deleted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSApproval" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSApproved" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSFG_BY_MCSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="MCSID" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSFGLOGS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="TYPE" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSFGLOGSDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSFGMailID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSFGID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MCSMailID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MCSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_MCSPDETAILSREVISIONS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="TYPE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MCSRejected" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSSP_BY_MCSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="MCSID" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSSPLOGS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="TYPE" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSSPLogsDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MCSSPMailID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSSPID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_ModelByProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Get_Models" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_MonthlyCPChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyCPKChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyCPKChart2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyCPKChart3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyCPKTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyCPKTable_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+    <Parameter Name="LotCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MonthlyCPKTable_OLD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyCPKTable2_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyCPTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="MonthTo" Type="varchar" Mode="In" />
+    <Parameter Name="YearTo" Type="varchar" Mode="In" />
+    <Parameter Name="LotCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_MonthlyQualityChartReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="periodFrom" Type="int" Mode="In" />
+    <Parameter Name="periodTo" Type="int" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyQualityTableReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="periodFrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="periodTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyQualityTableReportCompressed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="periodFrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="periodTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyReportChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyReportChart_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="LotNo" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyReportChart_Original" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyReportTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyReportTable_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="LotNo" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlyReportTable_Original" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Supplier" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Result" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlySAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_MonthlySACcategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Category" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlySummaryCpkTableReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="products" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="month" Type="nvarchar" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="month2" Type="nvarchar" Mode="In" />
+    <Parameter Name="year2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlySummaryCpkTableReport2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="varchar" Mode="In" />
+    <Parameter Name="products" Type="varchar(max)" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="month" Type="nvarchar" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="month2" Type="nvarchar" Mode="In" />
+    <Parameter Name="year2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlySummaryCpTableReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="varchar" Mode="In" />
+    <Parameter Name="products" Type="varchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="month" Type="nvarchar" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="month2" Type="nvarchar" Mode="In" />
+    <Parameter Name="year2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_MonthlySummaryCpTableReport2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="varchar" Mode="In" />
+    <Parameter Name="products" Type="varchar(max)" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="month" Type="nvarchar" Mode="In" />
+    <Parameter Name="year" Type="nvarchar" Mode="In" />
+    <Parameter Name="month2" Type="nvarchar" Mode="In" />
+    <Parameter Name="year2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_NCLotNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LotNumber" Type="varchar" Mode="In" />
+    <Parameter Name="SapCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_PartNameByProcessModel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_PartNames" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_Processes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_ProcessesCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_ProcessesFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_ProductByProcessModelPartName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_ProductCodes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_Products" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_RawData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Checkitem" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="PageNumber" Type="varchar" Mode="In" />
+    <Parameter Name="RowCount" Type="varchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="varchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_RawDataHeaderFilters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Checkitem" Type="varchar" Mode="In" />
+    <Parameter Name="MonthFrom" Type="varchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="varchar" Mode="In" />
+    <Parameter Name="PageNumber" Type="varchar" Mode="In" />
+    <Parameter Name="RowCount" Type="varchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="varchar" Mode="In" />
+    <Parameter Name="HeaderCol" Type="int" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_RawDataSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Month" Type="nvarchar" Mode="In" />
+    <Parameter Name="Year" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dayfrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dayto" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_SACCheckitemviaSapcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sapcode" Type="varchar" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SACEmailFG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InspectionID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSChildID" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SACEmailSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InspectionID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSChildID" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SACFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="HeaderCol" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GET_SACImage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SACImageAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_SACLotMasterList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="RowCount" Type="int" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_SACMCSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SapCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="LotNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SACQty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SapCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="LotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="MCSChildID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SACRelated" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_SACviaRefno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RefNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SACViewListSp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_Samplings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_SingleParts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_SinglePartsNoPaginationByMCSID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCSID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCByLocalID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="localID" Type="varchar" Mode="In" />
+    <Parameter Name="fromValue" Type="datetime" Mode="In" />
+    <Parameter Name="toValue" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCchartReport1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="checkitem" Type="nvarchar" Mode="In" />
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="endDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCchartReport2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="checkitem" Type="nvarchar" Mode="In" />
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="endDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCchartReport3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="checkitem" Type="nvarchar" Mode="In" />
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="endDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCchartReport4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="checkitem" Type="nvarchar" Mode="In" />
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="endDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCGraphData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItemNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCGraphStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItemNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCItemList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCSampleValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCSampleValueReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCSampleValueReport2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCSampleValueReport3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCSampleValueReport4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItemNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCStats_2016" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="varchar" Mode="In" />
+    <Parameter Name="EndDate" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="LotCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_SPCTableReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="endDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCTableReport_debug" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="endDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPCTableReport2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="checkitem" Type="nvarchar" Mode="In" />
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="process" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="endDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPDATAROW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPDATAROWDATA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_SPROWDATA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_Suppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_Suppliersdropdown" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GET_SuppliersFiltered" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="PartNo" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="Product" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GET_Terminals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_ToleranceViewPerInspDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Type" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Model" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PartName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Process" Type="varchar" MaxLength="300" />
+          <Property Name="CheckItem" Type="varchar" MaxLength="8000" />
+          <Property Name="UpperTOL" Type="varchar" MaxLength="10" />
+          <Property Name="LowerTOL" Type="varchar" MaxLength="10" />
+          <Property Name="NominalValue" Type="varchar" MaxLength="300" />
+          <Property Name="Stage" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="Supplier" Type="varchar" MaxLength="100" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GET_Users" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="RowCount" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrderBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filter" Type="nvarchar" Mode="In" />
+    <Parameter Name="RecordCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GET_UsersEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ColumnName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetNCCheckitems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LotNo" Type="varchar" Mode="In" />
+    <Parameter Name="SAPCode" Type="varchar" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="INSERT_RDailyCpk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Day" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="INSERT_RMonthlyCpk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+  </Function>
+  <Function Name="INSERT_RWeeklyCpk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="Week" Type="int" Mode="In" />
+  </Function>
+  <Function Name="INSERT_RYearlyCpk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Year" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertUpdate_Image" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="imageurl" Type="nvarchar" Mode="In" />
+    <Parameter Name="filename" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertUpdate_ImageSAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="imageurl" Type="nvarchar" Mode="In" />
+    <Parameter Name="filename" Type="nvarchar" Mode="In" />
+    <Parameter Name="saccode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="RECALC_DailyCpkValuesSp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="Model" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Period" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RECALC_MonthlyCpkValuesSp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="Model" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RECALC_WeeklyCpkValuesSp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="Model" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="Week" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RECALC_YearlyCpkValuesSp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stage" Type="varchar" Mode="In" />
+    <Parameter Name="Process" Type="varchar" Mode="In" />
+    <Parameter Name="Model" Type="varchar" Mode="In" />
+    <Parameter Name="PartName" Type="varchar" Mode="In" />
+    <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+    <Parameter Name="CheckItem" Type="varchar" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SAC_AccumulatedMetAgreedQuantity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SACRefNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SAC_AprrovedRecalcJudgement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SACRefNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SAC_ExpiredSACRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SACApproved_EmailNotif" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RefNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Recipients" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SACforReview_Approval" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="SAPCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Qty" Type="int" Mode="In" />
+    <Parameter Name="MCSID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Recipients" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SACReqStatus" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SACLotList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RefNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Select_Image" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SendEmail_HTML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServerAddr" Type="nvarchar" Mode="In" />
+    <Parameter Name="From" Type="nvarchar" Mode="In" />
+    <Parameter Name="To" Type="nvarchar" Mode="In" />
+    <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+    <Parameter Name="Bodytext" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="User" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="SSLConnection" Type="int" Mode="In" />
+    <Parameter Name="ServerPort" Type="int" Mode="In" />
+    <Parameter Name="ResultMsg" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="SendEmail_HTML_forNCJudgement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServerAddr" Type="nvarchar" Mode="In" />
+    <Parameter Name="From" Type="nvarchar" Mode="In" />
+    <Parameter Name="To" Type="nvarchar" Mode="In" />
+    <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+    <Parameter Name="Bodytext" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="User" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="SSLConnection" Type="int" Mode="In" />
+    <Parameter Name="ServerPort" Type="int" Mode="In" />
+    <Parameter Name="ResultMsg" Type="nvarchar" Mode="InOut" />
+    <Parameter Name="SQLQuery" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="setStartEndDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Day" Type="datetime" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="InOut" />
+    <Parameter Name="EndDate" Type="datetime" Mode="InOut" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TotalNCAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stage" Type="nvarchar" Mode="In" />
+    <Parameter Name="partNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="partName" Type="nvarchar" Mode="In" />
+    <Parameter Name="supplier" Type="nvarchar" Mode="In" />
+    <Parameter Name="product" Type="nvarchar" Mode="In" />
+    <Parameter Name="monthFrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="yearFrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="monthTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="yearTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="lotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="drillDownCondition" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Update_mcsDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="btnevent" Type="varchar" Mode="In" />
+    <Parameter Name="Pcode" Type="varchar" Mode="In" />
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Update_mcsImageDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCSID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSSPID" Type="varchar" Mode="In" />
+    <Parameter Name="Image" Type="varchar" Mode="In" />
+    <Parameter Name="Pcode" Type="varchar" Mode="In" />
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Update_mcsImageFGDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCSID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSFGID" Type="varchar" Mode="In" />
+    <Parameter Name="Image" Type="varchar" Mode="In" />
+    <Parameter Name="Pcode" Type="varchar" Mode="In" />
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Update_mcslogsDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSID" Type="varchar" Mode="In" />
+    <Parameter Name="MCSDETAILID" Type="varchar" Mode="In" />
+    <Parameter Name="etable" Type="varchar" Mode="In" />
+    <Parameter Name="btnevent" Type="varchar" Mode="In" />
+    <Parameter Name="Pcode" Type="varchar" Mode="In" />
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+    <Parameter Name="rremarks" Type="varchar" Mode="In" />
+    <Parameter Name="newID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateSACAccumulateQTY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RefNo" Type="varchar" Mode="In" />
+    <Parameter Name="MCSChildID" Type="varchar" Mode="In" />
+    <Parameter Name="Qty" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="SPI_SPCSDB_ProdModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cMCS" EntityType="Self.cMCS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cMCSFG" EntityType="Self.cMCSFG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cMCSSP" EntityType="Self.cMCSSP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iInspectionDetail" EntityType="Self.iInspectionDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iInspectionItem" EntityType="Self.iInspectionItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mCode" EntityType="Self.mCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mImage" EntityType="Self.mImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mInspectionMethod" EntityType="Self.mInspectionMethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mInstrument" EntityType="Self.mInstrument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mMailRecipient" EntityType="Self.mMailRecipient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mMailSetting" EntityType="Self.mMailSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mProcess" EntityType="Self.mProcess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mProduct" EntityType="Self.mProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mSampling" EntityType="Self.mSampling" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mSinglePart" EntityType="Self.mSinglePart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mSupplier" EntityType="Self.mSupplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mTerminal" EntityType="Self.mTerminal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mUser" EntityType="Self.mUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rDaily" EntityType="Self.rDaily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rMonthly" EntityType="Self.rMonthly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rWeekly" EntityType="Self.rWeekly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rYearly" EntityType="Self.rYearly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tCoefficient" EntityType="Self.tCoefficient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tSigmaTable" EntityType="Self.tSigmaTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="xLog" EntityType="Self.xLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="xMCSFGLog" EntityType="Self.xMCSFGLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="xMCSLog" EntityType="Self.xMCSLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="xMCSSPLog" EntityType="Self.xMCSSPLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="xNCMailLogs" EntityType="Self.xNCMailLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InspDetailOLDDB" EntityType="Self.InspDetailOLDDB" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[InspDetailOLDDB].[ID] AS [ID], 
+[InspDetailOLDDB].[InspectionItemId] AS [InspectionItemId], 
+[InspDetailOLDDB].[CheckItemNo] AS [CheckItemNo], 
+[InspDetailOLDDB].[Sequence] AS [Sequence], 
+[InspDetailOLDDB].[Data] AS [Data], 
+[InspDetailOLDDB].[Judgement] AS [Judgement], 
+[InspDetailOLDDB].[IsPartial] AS [IsPartial], 
+[InspDetailOLDDB].[IsFinished] AS [IsFinished], 
+[InspDetailOLDDB].[IsDeleted] AS [IsDeleted], 
+[InspDetailOLDDB].[RegisterID] AS [RegisterID], 
+[InspDetailOLDDB].[RegisterPG] AS [RegisterPG], 
+[InspDetailOLDDB].[RegisterDate] AS [RegisterDate], 
+[InspDetailOLDDB].[UpdateID] AS [UpdateID], 
+[InspDetailOLDDB].[UpdatePG] AS [UpdatePG], 
+[InspDetailOLDDB].[UpdateDate] AS [UpdateDate]
+FROM [dbo].[InspDetailOLDDB] AS [InspDetailOLDDB]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InspItemOLDDB" EntityType="Self.InspItemOLDDB" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[InspItemOLDDB].[ID] AS [ID], 
+[InspItemOLDDB].[LocalID] AS [LocalID], 
+[InspItemOLDDB].[MCSID] AS [MCSID], 
+[InspItemOLDDB].[MCSChildID] AS [MCSChildID], 
+[InspItemOLDDB].[CheckItem] AS [CheckItem], 
+[InspItemOLDDB].[Stage] AS [Stage], 
+[InspItemOLDDB].[SAPCode] AS [SAPCode], 
+[InspItemOLDDB].[IsSAC] AS [IsSAC], 
+[InspItemOLDDB].[SACLSL] AS [SACLSL], 
+[InspItemOLDDB].[SACUSL] AS [SACUSL], 
+[InspItemOLDDB].[SACQty] AS [SACQty], 
+[InspItemOLDDB].[SACQtyUsed] AS [SACQtyUsed], 
+[InspItemOLDDB].[SACStart] AS [SACStart], 
+[InspItemOLDDB].[SACEnd] AS [SACEnd], 
+[InspItemOLDDB].[SACNumber] AS [SACNumber], 
+[InspItemOLDDB].[CTQ] AS [CTQ], 
+[InspItemOLDDB].[Qty] AS [Qty], 
+[InspItemOLDDB].[LotNo] AS [LotNo], 
+[InspItemOLDDB].[Supplier] AS [Supplier], 
+[InspItemOLDDB].[SamplingSize] AS [SamplingSize], 
+[InspItemOLDDB].[OverallJudgement] AS [OverallJudgement], 
+[InspItemOLDDB].[InspectorRemark] AS [InspectorRemark], 
+[InspItemOLDDB].[IsPartial] AS [IsPartial], 
+[InspItemOLDDB].[IsFinished] AS [IsFinished], 
+[InspItemOLDDB].[IsDeleted] AS [IsDeleted], 
+[InspItemOLDDB].[RegisterID] AS [RegisterID], 
+[InspItemOLDDB].[RegisterPG] AS [RegisterPG], 
+[InspItemOLDDB].[RegisterDate] AS [RegisterDate], 
+[InspItemOLDDB].[UpdateID] AS [UpdateID], 
+[InspItemOLDDB].[UpdatePG] AS [UpdatePG], 
+[InspItemOLDDB].[UpdateDate] AS [UpdateDate]
+FROM [dbo].[InspItemOLDDB] AS [InspItemOLDDB]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="mImageSAC" EntityType="Self.mImageSAC" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[mImageSAC].[ID] AS [ID], 
+[mImageSAC].[Image_URL] AS [Image_URL], 
+[mImageSAC].[FileName] AS [FileName], 
+[mImageSAC].[SACRef] AS [SACRef]
+FROM [dbo].[mImageSAC] AS [mImageSAC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SAC_BlankData" EntityType="Self.SAC_BlankData" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[SAC_BlankData].[ID] AS [ID], 
+[SAC_BlankData].[RefNo] AS [RefNo], 
+[SAC_BlankData].[ChildID] AS [ChildID], 
+[SAC_BlankData].[Data] AS [Data], 
+[SAC_BlankData].[RegisterID] AS [RegisterID], 
+[SAC_BlankData].[RegisterPG] AS [RegisterPG], 
+[SAC_BlankData].[RegisterDate] AS [RegisterDate], 
+[SAC_BlankData].[UpdateID] AS [UpdateID], 
+[SAC_BlankData].[UpdatePG] AS [UpdatePG], 
+[SAC_BlankData].[UpdateDate] AS [UpdateDate]
+FROM [dbo].[SAC_BlankData] AS [SAC_BlankData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SACApproval" EntityType="Self.SACApproval" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[SACApproval].[cMSCSPFG] AS [cMSCSPFG], 
+[SACApproval].[LotNo] AS [LotNo], 
+[SACApproval].[SAPCode] AS [SAPCode], 
+[SACApproval].[RefNo] AS [RefNo], 
+[SACApproval].[PICK] AS [PICK], 
+[SACApproval].[AlreadyProduce] AS [AlreadyProduce], 
+[SACApproval].[Product] AS [Product], 
+[SACApproval].[Process] AS [Process], 
+[SACApproval].[PartName] AS [PartName], 
+[SACApproval].[Proposed_Quantity] AS [Proposed_Quantity], 
+[SACApproval].[Progress] AS [Progress], 
+[SACApproval].[Type] AS [Type], 
+[SACApproval].[EffectivityDateFrom] AS [EffectivityDateFrom], 
+[SACApproval].[EffectivityDateTo] AS [EffectivityDateTo], 
+[SACApproval].[SAC_Status] AS [SAC_Status], 
+[SACApproval].[CommonPartOverseaFactory] AS [CommonPartOverseaFactory], 
+[SACApproval].[CommonPartOverseaFactory_Name] AS [CommonPartOverseaFactory_Name], 
+[SACApproval].[AccumulatedQTY] AS [AccumulatedQTY], 
+[SACApproval].[Department] AS [Department], 
+[SACApproval].[Initiator] AS [Initiator], 
+[SACApproval].[Manager] AS [Manager], 
+[SACApproval].[Supervisor] AS [Supervisor], 
+[SACApproval].[Requestor] AS [Requestor], 
+[SACApproval].[Image] AS [Image], 
+[SACApproval].[Repeated_no] AS [Repeated_no], 
+[SACApproval].[Approved_By] AS [Approved_By], 
+[SACApproval].[Appearance] AS [Appearance], 
+[SACApproval].[Function] AS [Function], 
+[SACApproval].[NC_Ratio] AS [NC_Ratio], 
+[SACApproval].[Detected_by] AS [Detected_by], 
+[SACApproval].[TypeofDefect] AS [TypeofDefect], 
+[SACApproval].[MCSChildID] AS [MCSChildID], 
+[SACApproval].[CNC] AS [CNC], 
+[SACApproval].[DamagesType] AS [DamagesType], 
+[SACApproval].[SACUSL] AS [SACUSL], 
+[SACApproval].[SACLSL] AS [SACLSL], 
+[SACApproval].[ReasonOfNC] AS [ReasonOfNC], 
+[SACApproval].[CorrectiveAction] AS [CorrectiveAction], 
+[SACApproval].[CorrectiveSchedule] AS [CorrectiveSchedule], 
+[SACApproval].[PIC] AS [PIC], 
+[SACApproval].[ProcessFlow] AS [ProcessFlow], 
+[SACApproval].[President] AS [President], 
+[SACApproval].[VPPresident] AS [VPPresident], 
+[SACApproval].[Production] AS [Production], 
+[SACApproval].[PDA] AS [PDA], 
+[SACApproval].[PCD] AS [PCD], 
+[SACApproval].[Logistics] AS [Logistics], 
+[SACApproval].[PE] AS [PE], 
+[SACApproval].[QC] AS [QC], 
+[SACApproval].[SIC_QD] AS [SIC_QD], 
+[SACApproval].[SIC_QA] AS [SIC_QA], 
+[SACApproval].[SIC_As] AS [SIC_As], 
+[SACApproval].[SSF] AS [SSF], 
+[SACApproval].[SPL_SBM] AS [SPL_SBM], 
+[SACApproval].[SCRS] AS [SCRS], 
+[SACApproval].[SKC] AS [SKC], 
+[SACApproval].[SCM] AS [SCM], 
+[SACApproval].[SACCategory] AS [SACCategory], 
+[SACApproval].[SPCQC_Reason] AS [SPCQC_Reason], 
+[SACApproval].[Judgement] AS [Judgement], 
+[SACApproval].[QuantityAgreed] AS [QuantityAgreed], 
+[SACApproval].[EffectiveDate] AS [EffectiveDate], 
+[SACApproval].[ExpirationDate] AS [ExpirationDate], 
+[SACApproval].[RegisterID] AS [RegisterID], 
+[SACApproval].[RegisterPG] AS [RegisterPG], 
+[SACApproval].[RegisterDate] AS [RegisterDate], 
+[SACApproval].[UpdateID] AS [UpdateID], 
+[SACApproval].[UpdatePG] AS [UpdatePG], 
+[SACApproval].[UpdateDate] AS [UpdateDate]
+FROM [dbo].[SACApproval] AS [SACApproval]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="temptable" EntityType="Self.temptable" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[temptable].[ID] AS [ID], 
+[temptable].[MCSSPID] AS [MCSSPID], 
+[temptable].[MCSID] AS [MCSID], 
+[temptable].[No] AS [No], 
+[temptable].[CheckItem] AS [CheckItem], 
+[temptable].[NominalValue] AS [NominalValue], 
+[temptable].[LowerTOL] AS [LowerTOL], 
+[temptable].[UpperTOL] AS [UpperTOL], 
+[temptable].[Min] AS [Min], 
+[temptable].[Max] AS [Max], 
+[temptable].[Unit] AS [Unit], 
+[temptable].[Method] AS [Method], 
+[temptable].[CTQ] AS [CTQ], 
+[temptable].[DataType] AS [DataType], 
+[temptable].[InspectionStatus] AS [InspectionStatus], 
+[temptable].[Process] AS [Process], 
+[temptable].[Remark] AS [Remark], 
+[temptable].[SAPCode] AS [SAPCode], 
+[temptable].[InspectionData] AS [InspectionData], 
+[temptable].[Calculation] AS [Calculation], 
+[temptable].[MPCNo] AS [MPCNo], 
+[temptable].[MPCCriteria] AS [MPCCriteria], 
+[temptable].[Image] AS [Image], 
+[temptable].[EditedColumns] AS [EditedColumns], 
+[temptable].[Is_Approved] AS [Is_Approved], 
+[temptable].[Is_Rejected] AS [Is_Rejected], 
+[temptable].[RejectRemark] AS [RejectRemark], 
+[temptable].[RegisterID] AS [RegisterID], 
+[temptable].[RegisterPG] AS [RegisterPG], 
+[temptable].[RegisterDate] AS [RegisterDate], 
+[temptable].[UpdateID] AS [UpdateID], 
+[temptable].[UpdatePG] AS [UpdatePG], 
+[temptable].[UpdateDate] AS [UpdateDate], 
+[temptable].[Is_Deleted] AS [Is_Deleted]
+FROM [dbo].[temptable] AS [temptable]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="xNCMailTextLog" EntityType="Self.xNCMailTextLog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[xNCMailTextLog].[ID] AS [ID], 
+[xNCMailTextLog].[TextEmail] AS [TextEmail], 
+[xNCMailTextLog].[ResultMsg] AS [ResultMsg], 
+[xNCMailTextLog].[SqlQuery] AS [SqlQuery], 
+[xNCMailTextLog].[SqlMessage] AS [SqlMessage], 
+[xNCMailTextLog].[CreateDate] AS [CreateDate]
+FROM [dbo].[xNCMailTextLog] AS [xNCMailTextLog]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

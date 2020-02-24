@@ -1,0 +1,1906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SPI_SPCSDB_ProdModelStoreContainer" CdmEntityContainer="SPI_SPCSDB_ProdEntities">
+    <FunctionImportMapping FunctionName="SPI_SPCSDB_ProdModel.Store.fnSplitString" FunctionImportName="fnSplitString">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.fnSplitString_Result">
+          <ScalarProperty Name="splitdata" ColumnName="splitdata" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="SPI_SPCSDB_ProdModel.Store.GET_ToleranceViewPerInspDate" FunctionImportName="GET_ToleranceViewPerInspDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_ToleranceViewPerInspDate_Result">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="COMPUTE_MonthlyCpkNCCount" FunctionName="SPI_SPCSDB_ProdModel.Store.COMPUTE_MonthlyCpkNCCount" />
+    <FunctionImportMapping FunctionImportName="COMPUTE_RDailyCpkValue" FunctionName="SPI_SPCSDB_ProdModel.Store.COMPUTE_RDailyCpkValue" />
+    <FunctionImportMapping FunctionImportName="COMPUTE_RMonthlyCpkValue" FunctionName="SPI_SPCSDB_ProdModel.Store.COMPUTE_RMonthlyCpkValue" />
+    <FunctionImportMapping FunctionImportName="COMPUTE_RWeeklyCpkValue" FunctionName="SPI_SPCSDB_ProdModel.Store.COMPUTE_RWeeklyCpkValue" />
+    <FunctionImportMapping FunctionImportName="COMPUTE_RYearlyCpkValue" FunctionName="SPI_SPCSDB_ProdModel.Store.COMPUTE_RYearlyCpkValue" />
+    <FunctionImportMapping FunctionImportName="DEL_MCS" FunctionName="SPI_SPCSDB_ProdModel.Store.DEL_MCS" />
+    <FunctionImportMapping FunctionImportName="DEL_MCSFG" FunctionName="SPI_SPCSDB_ProdModel.Store.DEL_MCSFG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.DEL_MCSFG_Result">
+          <ScalarProperty Name="MCSFGID" ColumnName="MCSFGID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CTQMin" ColumnName="CTQMin" />
+          <ScalarProperty Name="CTQMax" ColumnName="CTQMax" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="SidePosition" ColumnName="SidePosition" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DEL_MCSSP" FunctionName="SPI_SPCSDB_ProdModel.Store.DEL_MCSSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.DEL_MCSSP_Result">
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DEL_UnfinishedLot" FunctionName="SPI_SPCSDB_ProdModel.Store.DEL_UnfinishedLot" />
+    <FunctionImportMapping FunctionImportName="Email_NCJudgementUponSubmit" FunctionName="SPI_SPCSDB_ProdModel.Store.Email_NCJudgementUponSubmit" />
+    <FunctionImportMapping FunctionImportName="GET_CCSDashboard" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_CCSDashboard" />
+    <FunctionImportMapping FunctionImportName="GET_CCSDashboard_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_CCSDashboard_2016" />
+    <FunctionImportMapping FunctionImportName="GET_CCSIssuance" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_CCSIssuance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_CCSIssuance_Result">
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="DWGCode" ColumnName="DWGCode" />
+          <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_checkitemFiltered" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_checkitemFiltered" />
+    <FunctionImportMapping FunctionImportName="GET_Codes" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Codes" />
+    <FunctionImportMapping FunctionImportName="GET_CodesByType" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_CodesByType" />
+    <FunctionImportMapping FunctionImportName="GET_DailyQualityChartReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyQualityChartReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_DailyQualityChartReport_Result">
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="stage" ColumnName="stage" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="doNo" ColumnName="doNo" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="samplingSize" ColumnName="samplingSize" />
+          <ScalarProperty Name="inspector" ColumnName="inspector" />
+          <ScalarProperty Name="overallJudge" ColumnName="overallJudge" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="rn" ColumnName="rn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_DailyQualityChartReportCompressed" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyQualityChartReportCompressed" />
+    <FunctionImportMapping FunctionImportName="GET_DailyQualityReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyQualityReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_DailyQualityReport_Result">
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="stage" ColumnName="stage" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="doNo" ColumnName="doNo" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="samplingSize" ColumnName="samplingSize" />
+          <ScalarProperty Name="inspector" ColumnName="inspector" />
+          <ScalarProperty Name="overallJudge" ColumnName="overallJudge" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_DailyQualityTableReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyQualityTableReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_DailyQualityTableReport_Result">
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="stage" ColumnName="stage" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="doNo" ColumnName="doNo" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="samplingSize" ColumnName="samplingSize" />
+          <ScalarProperty Name="inspector" ColumnName="inspector" />
+          <ScalarProperty Name="overallJudge" ColumnName="overallJudge" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="rn" ColumnName="rn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_DailyQualityTableReportCompressed" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyQualityTableReportCompressed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_DailyQualityTableReportCompressed_Result">
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="stage" ColumnName="stage" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="doNo" ColumnName="doNo" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="samplingSize" ColumnName="samplingSize" />
+          <ScalarProperty Name="inspector" ColumnName="inspector" />
+          <ScalarProperty Name="overallJudge" ColumnName="overallJudge" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="rn" ColumnName="rn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_DailyReportChart_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyReportChart_2016" />
+    <FunctionImportMapping FunctionImportName="GET_DailyReportChart_Original" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyReportChart_Original" />
+    <FunctionImportMapping FunctionImportName="GET_DailyReportCharts" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyReportCharts" />
+    <FunctionImportMapping FunctionImportName="GET_DailyReportTable_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyReportTable_2016" />
+    <FunctionImportMapping FunctionImportName="GET_DailyReportTable_Original" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyReportTable_Original" />
+    <FunctionImportMapping FunctionImportName="GET_DailyReportTables" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_DailyReportTables" />
+    <FunctionImportMapping FunctionImportName="GET_FGDATAROW" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_FGDATAROW">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_FGDATAROW_Result">
+          <ScalarProperty Name="MCSFGID" ColumnName="MCSFGID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CTQMin" ColumnName="CTQMin" />
+          <ScalarProperty Name="CTQMax" ColumnName="CTQMax" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="SidePosition" ColumnName="SidePosition" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_FinishGoodNoPaginationByMCSID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_FinishGoodNoPaginationByMCSID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_FinishGoodNoPaginationByMCSID_Result">
+          <ScalarProperty Name="MCSFGID" ColumnName="MCSFGID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CTQMin" ColumnName="CTQMin" />
+          <ScalarProperty Name="CTQMax" ColumnName="CTQMax" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="SidePosition" ColumnName="SidePosition" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_GraphLimitValues" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_GraphLimitValues" />
+    <FunctionImportMapping FunctionImportName="GET_InspectionMethods" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_InspectionMethods" />
+    <FunctionImportMapping FunctionImportName="GET_Instruments" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Instruments" />
+    <FunctionImportMapping FunctionImportName="GET_IPCChart" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCChart" />
+    <FunctionImportMapping FunctionImportName="GET_IPCChart_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCChart_2016" />
+    <FunctionImportMapping FunctionImportName="GET_IPCChart2_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCChart2_2016" />
+    <FunctionImportMapping FunctionImportName="GET_IPCChart3_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCChart3_2016" />
+    <FunctionImportMapping FunctionImportName="GET_IPCTable" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCTable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_IPCTable_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="JAN" ColumnName="JAN" />
+          <ScalarProperty Name="FEB" ColumnName="FEB" />
+          <ScalarProperty Name="MAR" ColumnName="MAR" />
+          <ScalarProperty Name="APR" ColumnName="APR" />
+          <ScalarProperty Name="MAY" ColumnName="MAY" />
+          <ScalarProperty Name="JUN" ColumnName="JUN" />
+          <ScalarProperty Name="JUL" ColumnName="JUL" />
+          <ScalarProperty Name="AUG" ColumnName="AUG" />
+          <ScalarProperty Name="SEP" ColumnName="SEP" />
+          <ScalarProperty Name="OCT" ColumnName="OCT" />
+          <ScalarProperty Name="NOV" ColumnName="NOV" />
+          <ScalarProperty Name="DEC" ColumnName="DEC" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_IPCTable_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCTable_2016" />
+    <FunctionImportMapping FunctionImportName="GET_IPCTable3_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCTable3_2016" />
+    <FunctionImportMapping FunctionImportName="GET_IPCTableDetailed" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCTableDetailed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_IPCTableDetailed_Result">
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="MonthNo" ColumnName="MonthNo" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Cpk" ColumnName="Cpk" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_IPCTableDetailed_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_IPCTableDetailed_2016" />
+    <FunctionImportMapping FunctionImportName="GET_LotNoFiltered" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_LotNoFiltered" />
+    <FunctionImportMapping FunctionImportName="GET_LotNos" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_LotNos" />
+    <FunctionImportMapping FunctionImportName="GET_MailRecipients" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MailRecipients" />
+    <FunctionImportMapping FunctionImportName="GET_MailSetting" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MailSetting">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_MailSetting_Result">
+          <ScalarProperty Name="MailSettingID" ColumnName="MailSettingID" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="NewMCSMsg" ColumnName="NewMCSMsg" />
+          <ScalarProperty Name="RevisedMCSMsg" ColumnName="RevisedMCSMsg" />
+          <ScalarProperty Name="ApprovedNewMCSMsg" ColumnName="ApprovedNewMCSMsg" />
+          <ScalarProperty Name="ApprovedRevisedMCSMsg" ColumnName="ApprovedRevisedMCSMsg" />
+          <ScalarProperty Name="RejectedNewMCSMsg" ColumnName="RejectedNewMCSMsg" />
+          <ScalarProperty Name="RejectedRevisedMCSMsg" ColumnName="RejectedRevisedMCSMsg" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_MailSettingDetails" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MailSettingDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_MailSettingDetails_Result">
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="NewMCSMsg" ColumnName="NewMCSMsg" />
+          <ScalarProperty Name="RevisedMCSMsg" ColumnName="RevisedMCSMsg" />
+          <ScalarProperty Name="ApprovedNewMCSMsg" ColumnName="ApprovedNewMCSMsg" />
+          <ScalarProperty Name="ApprovedRevisedMCSMsg" ColumnName="ApprovedRevisedMCSMsg" />
+          <ScalarProperty Name="RejectedNewMCSMsg" ColumnName="RejectedNewMCSMsg" />
+          <ScalarProperty Name="RejectedRevisedMCSMsg" ColumnName="RejectedRevisedMCSMsg" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_MailSettingID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MailSettingID" />
+    <FunctionImportMapping FunctionImportName="GET_MCS" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCS" />
+    <FunctionImportMapping FunctionImportName="GET_MCS_deleted" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCS_deleted" />
+    <FunctionImportMapping FunctionImportName="GET_MCSApproval" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSApproval" />
+    <FunctionImportMapping FunctionImportName="GET_MCSApproved" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSApproved" />
+    <FunctionImportMapping FunctionImportName="GET_MCSFG_BY_MCSID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSFG_BY_MCSID" />
+    <FunctionImportMapping FunctionImportName="GET_MCSFGLOGS" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSFGLOGS" />
+    <FunctionImportMapping FunctionImportName="GET_MCSFGLOGSDetails" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSFGLOGSDetails" />
+    <FunctionImportMapping FunctionImportName="GET_MCSFGMailID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSFGMailID" />
+    <FunctionImportMapping FunctionImportName="GET_MCSMailID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSMailID" />
+    <FunctionImportMapping FunctionImportName="GET_MCSP" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_MCSP_Result">
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="DrawingCode" ColumnName="DrawingCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="RevNo" ColumnName="RevNo" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_MCSPDETAILSREVISIONS" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSPDETAILSREVISIONS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_MCSPDETAILSREVISIONS_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="EditedColumns" ColumnName="EditedColumns" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_MCSRejected" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSRejected" />
+    <FunctionImportMapping FunctionImportName="GET_MCSSP_BY_MCSID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSSP_BY_MCSID" />
+    <FunctionImportMapping FunctionImportName="GET_MCSSPLOGS" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSSPLOGS" />
+    <FunctionImportMapping FunctionImportName="GET_MCSSPLogsDetails" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSSPLogsDetails" />
+    <FunctionImportMapping FunctionImportName="GET_MCSSPMailID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MCSSPMailID" />
+    <FunctionImportMapping FunctionImportName="GET_ModelByProcess" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_ModelByProcess" />
+    <FunctionImportMapping FunctionImportName="Get_Models" FunctionName="SPI_SPCSDB_ProdModel.Store.Get_Models" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPChart" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPChart" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPKChart" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPKChart" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPKChart2" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPKChart2" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPKChart3" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPKChart3" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPKTable" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPKTable" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPKTable_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPKTable_2016" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPKTable_OLD" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPKTable_OLD" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPKTable2_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPKTable2_2016" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyCPTable" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyCPTable" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyQualityChartReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyQualityChartReport" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyQualityTableReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyQualityTableReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_MonthlyQualityTableReport_Result">
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="stage" ColumnName="stage" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="doNo" ColumnName="doNo" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="samplingSize" ColumnName="samplingSize" />
+          <ScalarProperty Name="inspector" ColumnName="inspector" />
+          <ScalarProperty Name="overallJudge" ColumnName="overallJudge" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="rn" ColumnName="rn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_MonthlyQualityTableReportCompressed" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyQualityTableReportCompressed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_MonthlyQualityTableReportCompressed_Result">
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="stage" ColumnName="stage" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="doNo" ColumnName="doNo" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="samplingSize" ColumnName="samplingSize" />
+          <ScalarProperty Name="inspector" ColumnName="inspector" />
+          <ScalarProperty Name="overallJudge" ColumnName="overallJudge" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="rn" ColumnName="rn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_MonthlyReportChart" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyReportChart" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyReportChart_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyReportChart_2016" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyReportChart_Original" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyReportChart_Original" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyReportTable" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyReportTable" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyReportTable_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyReportTable_2016" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlyReportTable_Original" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlyReportTable_Original" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlySAC" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlySAC" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlySACcategory" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlySACcategory" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlySummaryCpkTableReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlySummaryCpkTableReport" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlySummaryCpkTableReport2" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlySummaryCpkTableReport2" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlySummaryCpTableReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlySummaryCpTableReport" />
+    <FunctionImportMapping FunctionImportName="GET_MonthlySummaryCpTableReport2" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_MonthlySummaryCpTableReport2" />
+    <FunctionImportMapping FunctionImportName="GET_NCLotNo" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_NCLotNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_NCLotNo_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_PartNameByProcessModel" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_PartNameByProcessModel" />
+    <FunctionImportMapping FunctionImportName="GET_PartNames" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_PartNames" />
+    <FunctionImportMapping FunctionImportName="GET_Processes" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Processes" />
+    <FunctionImportMapping FunctionImportName="GET_ProcessesCode" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_ProcessesCode" />
+    <FunctionImportMapping FunctionImportName="GET_ProcessesFilter" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_ProcessesFilter" />
+    <FunctionImportMapping FunctionImportName="GET_ProductByProcessModelPartName" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_ProductByProcessModelPartName" />
+    <FunctionImportMapping FunctionImportName="GET_ProductCodes" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_ProductCodes" />
+    <FunctionImportMapping FunctionImportName="GET_Products" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Products" />
+    <FunctionImportMapping FunctionImportName="GET_RawData" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_RawData" />
+    <FunctionImportMapping FunctionImportName="GET_RawDataHeaderFilters" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_RawDataHeaderFilters" />
+    <FunctionImportMapping FunctionImportName="GET_RawDataSP" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_RawDataSP" />
+    <FunctionImportMapping FunctionImportName="GET_SAC" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SAC" />
+    <FunctionImportMapping FunctionImportName="GET_SACCheckitemviaSapcode" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACCheckitemviaSapcode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SACCheckitemviaSapcode_Result">
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SACEmailFG" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACEmailFG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SACEmailFG_Result">
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CTQMin" ColumnName="CTQMin" />
+          <ScalarProperty Name="CTQMax" ColumnName="CTQMax" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="IsSAC" ColumnName="IsSAC" />
+          <ScalarProperty Name="SACLSL" ColumnName="SACLSL" />
+          <ScalarProperty Name="SACUSL" ColumnName="SACUSL" />
+          <ScalarProperty Name="SACQty" ColumnName="SACQty" />
+          <ScalarProperty Name="SACQtyUsed" ColumnName="SACQtyUsed" />
+          <ScalarProperty Name="SACStart" ColumnName="SACStart" />
+          <ScalarProperty Name="SACEnd" ColumnName="SACEnd" />
+          <ScalarProperty Name="SACNumber" ColumnName="SACNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SACEmailSP" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACEmailSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SACEmailSP_Result">
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="IsSAC" ColumnName="IsSAC" />
+          <ScalarProperty Name="SACLSL" ColumnName="SACLSL" />
+          <ScalarProperty Name="SACUSL" ColumnName="SACUSL" />
+          <ScalarProperty Name="SACQty" ColumnName="SACQty" />
+          <ScalarProperty Name="SACQtyUsed" ColumnName="SACQtyUsed" />
+          <ScalarProperty Name="SACStart" ColumnName="SACStart" />
+          <ScalarProperty Name="SACEnd" ColumnName="SACEnd" />
+          <ScalarProperty Name="SACNumber" ColumnName="SACNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SACFilter" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACFilter" />
+    <FunctionImportMapping FunctionImportName="GET_SACImage" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACImage" />
+    <FunctionImportMapping FunctionImportName="GET_SACImageAll" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACImageAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SACImageAll_Result">
+          <ScalarProperty Name="Image_URL" ColumnName="Image_URL" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="SACRef" ColumnName="SACRef" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SACLotMasterList" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACLotMasterList" />
+    <FunctionImportMapping FunctionImportName="GET_SACMCSID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACMCSID" />
+    <FunctionImportMapping FunctionImportName="GET_SACQty" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACQty" />
+    <FunctionImportMapping FunctionImportName="GET_SACRelated" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACRelated" />
+    <FunctionImportMapping FunctionImportName="GET_SACviaRefno" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACviaRefno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SACviaRefno_Result">
+          <ScalarProperty Name="cMSCSPFG" ColumnName="cMSCSPFG" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="PICK" ColumnName="PICK" />
+          <ScalarProperty Name="AlreadyProduce" ColumnName="AlreadyProduce" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Proposed_Quantity" ColumnName="Proposed_Quantity" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="EffectivityDateFrom" ColumnName="EffectivityDateFrom" />
+          <ScalarProperty Name="EffectivityDateTo" ColumnName="EffectivityDateTo" />
+          <ScalarProperty Name="SAC_Status" ColumnName="SAC_Status" />
+          <ScalarProperty Name="CommonPartOverseaFactory" ColumnName="CommonPartOverseaFactory" />
+          <ScalarProperty Name="CommonPartOverseaFactory_Name" ColumnName="CommonPartOverseaFactory_Name" />
+          <ScalarProperty Name="AccumulatedQTY" ColumnName="AccumulatedQTY" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Initiator" ColumnName="Initiator" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+          <ScalarProperty Name="Requestor" ColumnName="Requestor" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Repeated_no" ColumnName="Repeated_no" />
+          <ScalarProperty Name="Approved_By" ColumnName="Approved_By" />
+          <ScalarProperty Name="Appearance" ColumnName="Appearance" />
+          <ScalarProperty Name="Function" ColumnName="Function" />
+          <ScalarProperty Name="NC_Ratio" ColumnName="NC_Ratio" />
+          <ScalarProperty Name="Detected_by" ColumnName="Detected_by" />
+          <ScalarProperty Name="TypeofDefect" ColumnName="TypeofDefect" />
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="CNC" ColumnName="CNC" />
+          <ScalarProperty Name="DamagesType" ColumnName="DamagesType" />
+          <ScalarProperty Name="SACUSL" ColumnName="SACUSL" />
+          <ScalarProperty Name="SACLSL" ColumnName="SACLSL" />
+          <ScalarProperty Name="ReasonOfNC" ColumnName="ReasonOfNC" />
+          <ScalarProperty Name="CorrectiveAction" ColumnName="CorrectiveAction" />
+          <ScalarProperty Name="CorrectiveSchedule" ColumnName="CorrectiveSchedule" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="ProcessFlow" ColumnName="ProcessFlow" />
+          <ScalarProperty Name="President" ColumnName="President" />
+          <ScalarProperty Name="VPPresident" ColumnName="VPPresident" />
+          <ScalarProperty Name="Production" ColumnName="Production" />
+          <ScalarProperty Name="PDA" ColumnName="PDA" />
+          <ScalarProperty Name="PCD" ColumnName="PCD" />
+          <ScalarProperty Name="Logistics" ColumnName="Logistics" />
+          <ScalarProperty Name="PE" ColumnName="PE" />
+          <ScalarProperty Name="QC" ColumnName="QC" />
+          <ScalarProperty Name="SIC_QD" ColumnName="SIC_QD" />
+          <ScalarProperty Name="SIC_QA" ColumnName="SIC_QA" />
+          <ScalarProperty Name="SIC_As" ColumnName="SIC_As" />
+          <ScalarProperty Name="SSF" ColumnName="SSF" />
+          <ScalarProperty Name="SPL_SBM" ColumnName="SPL_SBM" />
+          <ScalarProperty Name="SCRS" ColumnName="SCRS" />
+          <ScalarProperty Name="SKC" ColumnName="SKC" />
+          <ScalarProperty Name="SCM" ColumnName="SCM" />
+          <ScalarProperty Name="SACCategory" ColumnName="SACCategory" />
+          <ScalarProperty Name="SPCQC_Reason" ColumnName="SPCQC_Reason" />
+          <ScalarProperty Name="Judgement" ColumnName="Judgement" />
+          <ScalarProperty Name="QuantityAgreed" ColumnName="QuantityAgreed" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SACViewListSp" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SACViewListSp" />
+    <FunctionImportMapping FunctionImportName="GET_Samplings" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Samplings" />
+    <FunctionImportMapping FunctionImportName="GET_SingleParts" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SingleParts" />
+    <FunctionImportMapping FunctionImportName="GET_SinglePartsNoPaginationByMCSID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SinglePartsNoPaginationByMCSID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SinglePartsNoPaginationByMCSID_Result">
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCODE" ColumnName="SAPCODE" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SPCByLocalID" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCByLocalID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SPCByLocalID_Result">
+          <ScalarProperty Name="InspectionItemId" ColumnName="InspectionItemId" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="DateString" ColumnName="DateString" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SPCChart" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCChart" />
+    <FunctionImportMapping FunctionImportName="GET_SPCchartReport1" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCchartReport1" />
+    <FunctionImportMapping FunctionImportName="GET_SPCchartReport2" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCchartReport2" />
+    <FunctionImportMapping FunctionImportName="GET_SPCchartReport3" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCchartReport3" />
+    <FunctionImportMapping FunctionImportName="GET_SPCchartReport4" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCchartReport4" />
+    <FunctionImportMapping FunctionImportName="GET_SPCGraphData" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCGraphData" />
+    <FunctionImportMapping FunctionImportName="GET_SPCGraphStats" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCGraphStats" />
+    <FunctionImportMapping FunctionImportName="GET_SPCItemList" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCItemList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SPCItemList_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SPCSampleValue" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCSampleValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SPCSampleValue_Result">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SPCSampleValueReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCSampleValueReport" />
+    <FunctionImportMapping FunctionImportName="GET_SPCSampleValueReport2" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCSampleValueReport2" />
+    <FunctionImportMapping FunctionImportName="GET_SPCSampleValueReport3" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCSampleValueReport3" />
+    <FunctionImportMapping FunctionImportName="GET_SPCSampleValueReport4" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCSampleValueReport4" />
+    <FunctionImportMapping FunctionImportName="GET_SPCStats" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCStats" />
+    <FunctionImportMapping FunctionImportName="GET_SPCStats_2016" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCStats_2016" />
+    <FunctionImportMapping FunctionImportName="GET_SPCTableReport" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCTableReport" />
+    <FunctionImportMapping FunctionImportName="GET_SPCTableReport_debug" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCTableReport_debug" />
+    <FunctionImportMapping FunctionImportName="GET_SPCTableReport2" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPCTableReport2" />
+    <FunctionImportMapping FunctionImportName="GET_SPDATAROW" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPDATAROW">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SPDATAROW_Result">
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SPDATAROWDATA" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPDATAROWDATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SPDATAROWDATA_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="EditedColumns" ColumnName="EditedColumns" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Rejected" ColumnName="Is_Rejected" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_SPROWDATA" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SPROWDATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GET_SPROWDATA_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="EditedColumns" ColumnName="EditedColumns" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Rejected" ColumnName="Is_Rejected" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_Suppliers" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Suppliers" />
+    <FunctionImportMapping FunctionImportName="GET_Suppliersdropdown" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Suppliersdropdown" />
+    <FunctionImportMapping FunctionImportName="GET_SuppliersFiltered" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_SuppliersFiltered" />
+    <FunctionImportMapping FunctionImportName="GET_Terminals" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Terminals" />
+    <FunctionImportMapping FunctionImportName="GET_Users" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_Users" />
+    <FunctionImportMapping FunctionImportName="GET_UsersEmail" FunctionName="SPI_SPCSDB_ProdModel.Store.GET_UsersEmail" />
+    <FunctionImportMapping FunctionImportName="GetNCCheckitems" FunctionName="SPI_SPCSDB_ProdModel.Store.GetNCCheckitems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.GetNCCheckitems_Result">
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="INSERT_RDailyCpk" FunctionName="SPI_SPCSDB_ProdModel.Store.INSERT_RDailyCpk" />
+    <FunctionImportMapping FunctionImportName="INSERT_RMonthlyCpk" FunctionName="SPI_SPCSDB_ProdModel.Store.INSERT_RMonthlyCpk" />
+    <FunctionImportMapping FunctionImportName="INSERT_RWeeklyCpk" FunctionName="SPI_SPCSDB_ProdModel.Store.INSERT_RWeeklyCpk" />
+    <FunctionImportMapping FunctionImportName="INSERT_RYearlyCpk" FunctionName="SPI_SPCSDB_ProdModel.Store.INSERT_RYearlyCpk" />
+    <FunctionImportMapping FunctionImportName="InsertUpdate_Image" FunctionName="SPI_SPCSDB_ProdModel.Store.InsertUpdate_Image" />
+    <FunctionImportMapping FunctionImportName="InsertUpdate_ImageSAC" FunctionName="SPI_SPCSDB_ProdModel.Store.InsertUpdate_ImageSAC" />
+    <FunctionImportMapping FunctionImportName="RECALC_DailyCpkValuesSp" FunctionName="SPI_SPCSDB_ProdModel.Store.RECALC_DailyCpkValuesSp" />
+    <FunctionImportMapping FunctionImportName="RECALC_MonthlyCpkValuesSp" FunctionName="SPI_SPCSDB_ProdModel.Store.RECALC_MonthlyCpkValuesSp" />
+    <FunctionImportMapping FunctionImportName="RECALC_WeeklyCpkValuesSp" FunctionName="SPI_SPCSDB_ProdModel.Store.RECALC_WeeklyCpkValuesSp" />
+    <FunctionImportMapping FunctionImportName="RECALC_YearlyCpkValuesSp" FunctionName="SPI_SPCSDB_ProdModel.Store.RECALC_YearlyCpkValuesSp" />
+    <FunctionImportMapping FunctionImportName="SAC_AccumulatedMetAgreedQuantity" FunctionName="SPI_SPCSDB_ProdModel.Store.SAC_AccumulatedMetAgreedQuantity" />
+    <FunctionImportMapping FunctionImportName="SAC_AprrovedRecalcJudgement" FunctionName="SPI_SPCSDB_ProdModel.Store.SAC_AprrovedRecalcJudgement" />
+    <FunctionImportMapping FunctionImportName="SAC_ExpiredSACRequests" FunctionName="SPI_SPCSDB_ProdModel.Store.SAC_ExpiredSACRequests" />
+    <FunctionImportMapping FunctionImportName="SACApproved_EmailNotif" FunctionName="SPI_SPCSDB_ProdModel.Store.SACApproved_EmailNotif" />
+    <FunctionImportMapping FunctionImportName="SACforReview_Approval" FunctionName="SPI_SPCSDB_ProdModel.Store.SACforReview_Approval" />
+    <FunctionImportMapping FunctionImportName="SACLotList" FunctionName="SPI_SPCSDB_ProdModel.Store.SACLotList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.SACLotList_Result">
+          <ScalarProperty Name="SAC" ColumnName="SAC" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Inspector" ColumnName="Inspector" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Select_Image" FunctionName="SPI_SPCSDB_ProdModel.Store.Select_Image">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.Select_Image_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Image_URL" ColumnName="Image_URL" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SendEmail_HTML" FunctionName="SPI_SPCSDB_ProdModel.Store.SendEmail_HTML" />
+    <FunctionImportMapping FunctionImportName="SendEmail_HTML_forNCJudgement" FunctionName="SPI_SPCSDB_ProdModel.Store.SendEmail_HTML_forNCJudgement" />
+    <FunctionImportMapping FunctionImportName="setStartEndDate" FunctionName="SPI_SPCSDB_ProdModel.Store.setStartEndDate" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SPI_SPCSDB_ProdModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SPI_SPCSDB_ProdModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SPI_SPCSDB_ProdModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SPI_SPCSDB_ProdModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SPI_SPCSDB_ProdModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SPI_SPCSDB_ProdModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SPI_SPCSDB_ProdModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="TotalNCAC" FunctionName="SPI_SPCSDB_ProdModel.Store.TotalNCAC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.TotalNCAC_Result">
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="dateFinished" ColumnName="dateFinished" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="stage" ColumnName="stage" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="doNo" ColumnName="doNo" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="samplingSize" ColumnName="samplingSize" />
+          <ScalarProperty Name="inspector" ColumnName="inspector" />
+          <ScalarProperty Name="overallJudge" ColumnName="overallJudge" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="rn" ColumnName="rn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Update_mcsDetails" FunctionName="SPI_SPCSDB_ProdModel.Store.Update_mcsDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SPI_SPCSDB_ProdModel.Update_mcsDetails_Result">
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="DrawingCode" ColumnName="DrawingCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="RevNo" ColumnName="RevNo" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Update_mcsImageDetails" FunctionName="SPI_SPCSDB_ProdModel.Store.Update_mcsImageDetails" />
+    <FunctionImportMapping FunctionImportName="Update_mcsImageFGDetails" FunctionName="SPI_SPCSDB_ProdModel.Store.Update_mcsImageFGDetails" />
+    <FunctionImportMapping FunctionImportName="Update_mcslogsDetails" FunctionName="SPI_SPCSDB_ProdModel.Store.Update_mcslogsDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateSACAccumulateQTY" FunctionName="SPI_SPCSDB_ProdModel.Store.UpdateSACAccumulateQTY" />
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cMCS">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.cMC">
+        <MappingFragment StoreEntitySet="cMCS">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="RevNo" ColumnName="RevNo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="DrawingCode" ColumnName="DrawingCode" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cMCSFGs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.cMCSFG">
+        <MappingFragment StoreEntitySet="cMCSFG">
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="SidePosition" ColumnName="SidePosition" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="CTQMax" ColumnName="CTQMax" />
+          <ScalarProperty Name="CTQMin" ColumnName="CTQMin" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="MCSFGID" ColumnName="MCSFGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cMCSSPs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.cMCSSP">
+        <MappingFragment StoreEntitySet="cMCSSP">
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iInspectionDetails">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.iInspectionDetail">
+        <MappingFragment StoreEntitySet="iInspectionDetail">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+          <ScalarProperty Name="IsPartial" ColumnName="IsPartial" />
+          <ScalarProperty Name="Judgement" ColumnName="Judgement" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="CheckItemNo" ColumnName="CheckItemNo" />
+          <ScalarProperty Name="InspectionItemId" ColumnName="InspectionItemId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iInspectionItems">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.iInspectionItem">
+        <MappingFragment StoreEntitySet="iInspectionItem">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+          <ScalarProperty Name="IsPartial" ColumnName="IsPartial" />
+          <ScalarProperty Name="InspectorRemark" ColumnName="InspectorRemark" />
+          <ScalarProperty Name="OverallJudgement" ColumnName="OverallJudgement" />
+          <ScalarProperty Name="SamplingSize" ColumnName="SamplingSize" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="SACNumber" ColumnName="SACNumber" />
+          <ScalarProperty Name="SACEnd" ColumnName="SACEnd" />
+          <ScalarProperty Name="SACStart" ColumnName="SACStart" />
+          <ScalarProperty Name="SACQtyUsed" ColumnName="SACQtyUsed" />
+          <ScalarProperty Name="SACQty" ColumnName="SACQty" />
+          <ScalarProperty Name="SACUSL" ColumnName="SACUSL" />
+          <ScalarProperty Name="SACLSL" ColumnName="SACLSL" />
+          <ScalarProperty Name="IsSAC" ColumnName="IsSAC" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mCodes">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mCode">
+        <MappingFragment StoreEntitySet="mCode">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CodePath" ColumnName="CodePath" />
+          <ScalarProperty Name="CodeDescription" ColumnName="CodeDescription" />
+          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+          <ScalarProperty Name="CodeType" ColumnName="CodeType" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mImages">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mImage">
+        <MappingFragment StoreEntitySet="mImage">
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Image_URL" ColumnName="Image_URL" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mInspectionMethods">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mInspectionMethod">
+        <MappingFragment StoreEntitySet="mInspectionMethod">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IMName" ColumnName="IMName" />
+          <ScalarProperty Name="IMCode" ColumnName="IMCode" />
+          <ScalarProperty Name="IMID" ColumnName="IMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mInstruments">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mInstrument">
+        <MappingFragment StoreEntitySet="mInstrument">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="USBPort" ColumnName="USBPort" />
+          <ScalarProperty Name="TerminalID" ColumnName="TerminalID" />
+          <ScalarProperty Name="InstrumentName" ColumnName="InstrumentName" />
+          <ScalarProperty Name="InstrumentCode" ColumnName="InstrumentCode" />
+          <ScalarProperty Name="InstrumentID" ColumnName="InstrumentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mMailRecipients">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mMailRecipient">
+        <MappingFragment StoreEntitySet="mMailRecipient">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RejectedRevised" ColumnName="RejectedRevised" />
+          <ScalarProperty Name="ApprovedRevised" ColumnName="ApprovedRevised" />
+          <ScalarProperty Name="RejectedNew" ColumnName="RejectedNew" />
+          <ScalarProperty Name="ApprovedNew" ColumnName="ApprovedNew" />
+          <ScalarProperty Name="RevisedMCS" ColumnName="RevisedMCS" />
+          <ScalarProperty Name="NewMCS" ColumnName="NewMCS" />
+          <ScalarProperty Name="MREmail" ColumnName="MREmail" />
+          <ScalarProperty Name="MRName" ColumnName="MRName" />
+          <ScalarProperty Name="MRID" ColumnName="MRID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mMailSettings">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mMailSetting">
+        <MappingFragment StoreEntitySet="mMailSetting">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RejectedRevisedMCSMsg" ColumnName="RejectedRevisedMCSMsg" />
+          <ScalarProperty Name="RejectedNewMCSMsg" ColumnName="RejectedNewMCSMsg" />
+          <ScalarProperty Name="ApprovedRevisedMCSMsg" ColumnName="ApprovedRevisedMCSMsg" />
+          <ScalarProperty Name="ApprovedNewMCSMsg" ColumnName="ApprovedNewMCSMsg" />
+          <ScalarProperty Name="RevisedMCSMsg" ColumnName="RevisedMCSMsg" />
+          <ScalarProperty Name="NewMCSMsg" ColumnName="NewMCSMsg" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="MailSettingID" ColumnName="MailSettingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mProcesses">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mProcess">
+        <MappingFragment StoreEntitySet="mProcess">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+          <ScalarProperty Name="ProcessCode" ColumnName="ProcessCode" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mProducts">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mProduct">
+        <MappingFragment StoreEntitySet="mProduct">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mSamplings">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mSampling">
+        <MappingFragment StoreEntitySet="mSampling">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsBoth" ColumnName="IsBoth" />
+          <ScalarProperty Name="QAAC" ColumnName="QAAC" />
+          <ScalarProperty Name="QANC" ColumnName="QANC" />
+          <ScalarProperty Name="AccmSampleSize" ColumnName="AccmSampleSize" />
+          <ScalarProperty Name="SampleSize" ColumnName="SampleSize" />
+          <ScalarProperty Name="Sample" ColumnName="Sample" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="Visual" ColumnName="Visual" />
+          <ScalarProperty Name="Dimension" ColumnName="Dimension" />
+          <ScalarProperty Name="LotSizeUpper" ColumnName="LotSizeUpper" />
+          <ScalarProperty Name="LotSizeLower" ColumnName="LotSizeLower" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mSingleParts">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mSinglePart">
+        <MappingFragment StoreEntitySet="mSinglePart">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="SPCode" ColumnName="SPCode" />
+          <ScalarProperty Name="SPID" ColumnName="SPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mSuppliers">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mSupplier">
+        <MappingFragment StoreEntitySet="mSupplier">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="SupplierEmail" ColumnName="SupplierEmail" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mTerminals">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mTerminal">
+        <MappingFragment StoreEntitySet="mTerminal">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="TerminalSection" ColumnName="TerminalSection" />
+          <ScalarProperty Name="TerminalName" ColumnName="TerminalName" />
+          <ScalarProperty Name="TerminalCode" ColumnName="TerminalCode" />
+          <ScalarProperty Name="TerminalID" ColumnName="TerminalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mUsers">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mUser">
+        <MappingFragment StoreEntitySet="mUser">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+          <ScalarProperty Name="LoginAttempts" ColumnName="LoginAttempts" />
+          <ScalarProperty Name="Can_Request" ColumnName="Can_Request" />
+          <ScalarProperty Name="Can_Approved" ColumnName="Can_Approved" />
+          <ScalarProperty Name="Incomplete_Inspection" ColumnName="Incomplete_Inspection" />
+          <ScalarProperty Name="RPTModule" ColumnName="RPTModule" />
+          <ScalarProperty Name="INSModule" ColumnName="INSModule" />
+          <ScalarProperty Name="MCSModule" ColumnName="MCSModule" />
+          <ScalarProperty Name="MGTModule" ColumnName="MGTModule" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="UserAccess" ColumnName="UserAccess" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rDailies">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.rDaily">
+        <MappingFragment StoreEntitySet="rDaily">
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Cpk" ColumnName="Cpk" />
+          <ScalarProperty Name="LT" ColumnName="LT" />
+          <ScalarProperty Name="UT" ColumnName="UT" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rMonthlies">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.rMonthly">
+        <MappingFragment StoreEntitySet="rMonthly">
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Cpk" ColumnName="Cpk" />
+          <ScalarProperty Name="LT" ColumnName="LT" />
+          <ScalarProperty Name="UT" ColumnName="UT" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rWeeklies">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.rWeekly">
+        <MappingFragment StoreEntitySet="rWeekly">
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="Cpk" ColumnName="Cpk" />
+          <ScalarProperty Name="LT" ColumnName="LT" />
+          <ScalarProperty Name="UT" ColumnName="UT" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rYearlies">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.rYearly">
+        <MappingFragment StoreEntitySet="rYearly">
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Cpk" ColumnName="Cpk" />
+          <ScalarProperty Name="LT" ColumnName="LT" />
+          <ScalarProperty Name="UT" ColumnName="UT" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tCoefficients">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.tCoefficient">
+        <MappingFragment StoreEntitySet="tCoefficient">
+          <ScalarProperty Name="C4" ColumnName="C4" />
+          <ScalarProperty Name="B4" ColumnName="B4" />
+          <ScalarProperty Name="B3" ColumnName="B3" />
+          <ScalarProperty Name="D4" ColumnName="D4" />
+          <ScalarProperty Name="D3" ColumnName="D3" />
+          <ScalarProperty Name="A2" ColumnName="A2" />
+          <ScalarProperty Name="N" ColumnName="N" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tSigmaTables">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.tSigmaTable">
+        <MappingFragment StoreEntitySet="tSigmaTable">
+          <ScalarProperty Name="sigma" ColumnName="sigma" />
+          <ScalarProperty Name="ncpmo" ColumnName="ncpmo" />
+          <ScalarProperty Name="ncpu" ColumnName="ncpu" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xLogs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.xLog">
+        <MappingFragment StoreEntitySet="xLog">
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xMCSFGLogs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.xMCSFGLog">
+        <MappingFragment StoreEntitySet="xMCSFGLog">
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="Is_Rejected" ColumnName="Is_Rejected" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="EditedColumns" ColumnName="EditedColumns" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="SidePosition" ColumnName="SidePosition" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="CTQMax" ColumnName="CTQMax" />
+          <ScalarProperty Name="CTQMin" ColumnName="CTQMin" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="MCSFGID" ColumnName="MCSFGID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xMCSLogs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.xMCSLog">
+        <MappingFragment StoreEntitySet="xMCSLog">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="RevNo" ColumnName="RevNo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="DrawingCode" ColumnName="DrawingCode" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xMCSSPLogs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.xMCSSPLog">
+        <MappingFragment StoreEntitySet="xMCSSPLog">
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="Is_Rejected" ColumnName="Is_Rejected" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="EditedColumns" ColumnName="EditedColumns" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xNCMailLogs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.xNCMailLog">
+        <MappingFragment StoreEntitySet="xNCMailLogs">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="RecordDate" ColumnName="RecordDate" />
+          <ScalarProperty Name="IsEmailSent" ColumnName="IsEmailSent" />
+          <ScalarProperty Name="OverAllJudgement" ColumnName="OverAllJudgement" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="InspectionItemID" ColumnName="InspectionItemID" />
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InspDetailOLDDBs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.InspDetailOLDDB">
+        <MappingFragment StoreEntitySet="InspDetailOLDDB">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+          <ScalarProperty Name="IsPartial" ColumnName="IsPartial" />
+          <ScalarProperty Name="Judgement" ColumnName="Judgement" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="CheckItemNo" ColumnName="CheckItemNo" />
+          <ScalarProperty Name="InspectionItemId" ColumnName="InspectionItemId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InspItemOLDDBs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.InspItemOLDDB">
+        <MappingFragment StoreEntitySet="InspItemOLDDB">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+          <ScalarProperty Name="IsPartial" ColumnName="IsPartial" />
+          <ScalarProperty Name="InspectorRemark" ColumnName="InspectorRemark" />
+          <ScalarProperty Name="OverallJudgement" ColumnName="OverallJudgement" />
+          <ScalarProperty Name="SamplingSize" ColumnName="SamplingSize" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="SACNumber" ColumnName="SACNumber" />
+          <ScalarProperty Name="SACEnd" ColumnName="SACEnd" />
+          <ScalarProperty Name="SACStart" ColumnName="SACStart" />
+          <ScalarProperty Name="SACQtyUsed" ColumnName="SACQtyUsed" />
+          <ScalarProperty Name="SACQty" ColumnName="SACQty" />
+          <ScalarProperty Name="SACUSL" ColumnName="SACUSL" />
+          <ScalarProperty Name="SACLSL" ColumnName="SACLSL" />
+          <ScalarProperty Name="IsSAC" ColumnName="IsSAC" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="LocalID" ColumnName="LocalID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mImageSACs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.mImageSAC">
+        <MappingFragment StoreEntitySet="mImageSAC">
+          <ScalarProperty Name="SACRef" ColumnName="SACRef" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Image_URL" ColumnName="Image_URL" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAC_BlankData">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.SAC_BlankData">
+        <MappingFragment StoreEntitySet="SAC_BlankData">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SACApprovals">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.SACApproval">
+        <MappingFragment StoreEntitySet="SACApproval">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="QuantityAgreed" ColumnName="QuantityAgreed" />
+          <ScalarProperty Name="Judgement" ColumnName="Judgement" />
+          <ScalarProperty Name="SPCQC_Reason" ColumnName="SPCQC_Reason" />
+          <ScalarProperty Name="SACCategory" ColumnName="SACCategory" />
+          <ScalarProperty Name="SCM" ColumnName="SCM" />
+          <ScalarProperty Name="SKC" ColumnName="SKC" />
+          <ScalarProperty Name="SCRS" ColumnName="SCRS" />
+          <ScalarProperty Name="SPL_SBM" ColumnName="SPL_SBM" />
+          <ScalarProperty Name="SSF" ColumnName="SSF" />
+          <ScalarProperty Name="SIC_As" ColumnName="SIC_As" />
+          <ScalarProperty Name="SIC_QA" ColumnName="SIC_QA" />
+          <ScalarProperty Name="SIC_QD" ColumnName="SIC_QD" />
+          <ScalarProperty Name="QC" ColumnName="QC" />
+          <ScalarProperty Name="PE" ColumnName="PE" />
+          <ScalarProperty Name="Logistics" ColumnName="Logistics" />
+          <ScalarProperty Name="PCD" ColumnName="PCD" />
+          <ScalarProperty Name="PDA" ColumnName="PDA" />
+          <ScalarProperty Name="Production" ColumnName="Production" />
+          <ScalarProperty Name="VPPresident" ColumnName="VPPresident" />
+          <ScalarProperty Name="President" ColumnName="President" />
+          <ScalarProperty Name="ProcessFlow" ColumnName="ProcessFlow" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="CorrectiveSchedule" ColumnName="CorrectiveSchedule" />
+          <ScalarProperty Name="CorrectiveAction" ColumnName="CorrectiveAction" />
+          <ScalarProperty Name="ReasonOfNC" ColumnName="ReasonOfNC" />
+          <ScalarProperty Name="SACLSL" ColumnName="SACLSL" />
+          <ScalarProperty Name="SACUSL" ColumnName="SACUSL" />
+          <ScalarProperty Name="DamagesType" ColumnName="DamagesType" />
+          <ScalarProperty Name="CNC" ColumnName="CNC" />
+          <ScalarProperty Name="MCSChildID" ColumnName="MCSChildID" />
+          <ScalarProperty Name="TypeofDefect" ColumnName="TypeofDefect" />
+          <ScalarProperty Name="Detected_by" ColumnName="Detected_by" />
+          <ScalarProperty Name="NC_Ratio" ColumnName="NC_Ratio" />
+          <ScalarProperty Name="Function" ColumnName="Function" />
+          <ScalarProperty Name="Appearance" ColumnName="Appearance" />
+          <ScalarProperty Name="Approved_By" ColumnName="Approved_By" />
+          <ScalarProperty Name="Repeated_no" ColumnName="Repeated_no" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Requestor" ColumnName="Requestor" />
+          <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="Initiator" ColumnName="Initiator" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="AccumulatedQTY" ColumnName="AccumulatedQTY" />
+          <ScalarProperty Name="CommonPartOverseaFactory_Name" ColumnName="CommonPartOverseaFactory_Name" />
+          <ScalarProperty Name="CommonPartOverseaFactory" ColumnName="CommonPartOverseaFactory" />
+          <ScalarProperty Name="SAC_Status" ColumnName="SAC_Status" />
+          <ScalarProperty Name="EffectivityDateTo" ColumnName="EffectivityDateTo" />
+          <ScalarProperty Name="EffectivityDateFrom" ColumnName="EffectivityDateFrom" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="Proposed_Quantity" ColumnName="Proposed_Quantity" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="AlreadyProduce" ColumnName="AlreadyProduce" />
+          <ScalarProperty Name="PICK" ColumnName="PICK" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="cMSCSPFG" ColumnName="cMSCSPFG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temptables">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.temptable">
+        <MappingFragment StoreEntitySet="temptable">
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatePG" ColumnName="UpdatePG" />
+          <ScalarProperty Name="UpdateID" ColumnName="UpdateID" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="RegisterPG" ColumnName="RegisterPG" />
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="Is_Rejected" ColumnName="Is_Rejected" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="EditedColumns" ColumnName="EditedColumns" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="MPCCriteria" ColumnName="MPCCriteria" />
+          <ScalarProperty Name="MPCNo" ColumnName="MPCNo" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="InspectionData" ColumnName="InspectionData" />
+          <ScalarProperty Name="SAPCode" ColumnName="SAPCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="InspectionStatus" ColumnName="InspectionStatus" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="CTQ" ColumnName="CTQ" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="UpperTOL" ColumnName="UpperTOL" />
+          <ScalarProperty Name="LowerTOL" ColumnName="LowerTOL" />
+          <ScalarProperty Name="NominalValue" ColumnName="NominalValue" />
+          <ScalarProperty Name="CheckItem" ColumnName="CheckItem" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="MCSID" ColumnName="MCSID" />
+          <ScalarProperty Name="MCSSPID" ColumnName="MCSSPID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xNCMailTextLogs">
+      <EntityTypeMapping TypeName="SPI_SPCSDB_ProdModel.xNCMailTextLog">
+        <MappingFragment StoreEntitySet="xNCMailTextLog">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="SqlMessage" ColumnName="SqlMessage" />
+          <ScalarProperty Name="SqlQuery" ColumnName="SqlQuery" />
+          <ScalarProperty Name="ResultMsg" ColumnName="ResultMsg" />
+          <ScalarProperty Name="TextEmail" ColumnName="TextEmail" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

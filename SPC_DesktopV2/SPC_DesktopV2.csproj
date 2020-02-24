@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DFB4529-B165-4E32-8768-4A5A2BCF13E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPC_DesktopV2</RootNamespace>
+    <AssemblyName>SPC_DesktopV2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ce.ragas\Desktop\PF\SPC DesktopV2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7ADEBE04CA60542C42FFE24B0504D2A3962AF309</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SPC_DesktopV2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shimano_sora_r3000_4_ES1_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="cMC.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cMCSFG.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cMCSSP.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEL_MCSFG_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEL_MCSSP_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fnSplitString_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetNCCheckitems_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_CCSIssuance_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_DailyQualityChartReport_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_DailyQualityReport_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_DailyQualityTableReportCompressed_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_DailyQualityTableReport_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_FGDATAROW_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_FinishGoodNoPaginationByMCSID_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_IPCTableDetailed_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_IPCTable_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_MailSettingDetails_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_MailSetting_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_MCSPDETAILSREVISIONS_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_MCSP_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_MonthlyQualityTableReportCompressed_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_MonthlyQualityTableReport_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_NCLotNo_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SACCheckitemviaSapcode_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SACEmailFG_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SACEmailSP_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SACImageAll_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SACviaRefno_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SinglePartsNoPaginationByMCSID_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SPCByLocalID_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SPCItemList_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SPCSampleValue_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SPDATAROWDATA_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SPDATAROW_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_SPROWDATA_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_ToleranceViewPerInspDate_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iInspectionDetail.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iInspectionItem.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InspDetailOLDDB.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionDetail\Inspectiondetail.xaml.cs">
+      <DependentUpon>Inspectiondetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionItem\Inspectionitem.xaml.cs">
+      <DependentUpon>Inspectionitem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InspItemOLDDB.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mCode.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mImage.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mImageSAC.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mInspectionMethod.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mInstrument.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mMailRecipient.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mMailSetting.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mProcess.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mProduct.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mSampling.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mSinglePart.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mSupplier.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mTerminal.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mUser.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rDaily.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rMonthly.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rWeekly.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rYearly.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SACApproval.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SACLotList_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAC_BlankData.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Image_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPCModels\DetailsInspect.cs" />
+    <Compile Include="SPCModels\FGModel.cs" />
+    <Compile Include="SPCModels\SPModel.cs" />
+    <Compile Include="SPCModels\UnFinished.cs" />
+    <Compile Include="SPC_ProdDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPC_ProdDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPC_ProdDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPC_ProdDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPC_ProdDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCoefficient.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="temptable.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TotalNCAC_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tSigmaTable.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Update_mcsDetails_Result.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xLog.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xMCSFGLog.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xMCSLog.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xMCSSPLog.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xNCMailLog.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xNCMailTextLog.cs">
+      <DependentUpon>SPC_ProdDB.tt</DependentUpon>
+    </Compile>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InspectionDetail\Inspectiondetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InspectionItem\Inspectionitem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <EntityDeploy Include="SPC_ProdDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SPC_ProdDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SPC_DesktopV2_TemporaryKey.pfx" />
+    <None Include="SPC_ProdDB.edmx.diagram">
+      <DependentUpon>SPC_ProdDB.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Black+E-bike.png" />
+    <Resource Include="Resources\SPCLogo.png" />
+    <Resource Include="Resources\trash-can-icon-18.png" />
+    <Resource Include="Resources\1280px-Shimano_logo.svg.png" />
+    <Resource Include="Resources\company_logo.png" />
+    <Resource Include="Resources\588a6758d06f6719692a2d22.png" />
+    <Resource Include="Resources\73292-200.png" />
+    <Resource Include="Resources\upload-cloud-pngrepo-com.png" />
+    <Resource Include="Resources\img_426756.png" />
+    <Resource Include="Resources\no-image-available.jpg" />
+    <Resource Include="Resources\user-png-icon-file-user-icon-black-01-png-311.png" />
+    <Resource Include="Resources\bg2.jpg" />
+    <Resource Include="Resources\download.png" />
+    <Resource Include="Resources\user.png" />
+    <Resource Include="shimano_sora_r3000_4_ES1_icon.ico" />
+    <Content Include="SPC_ProdDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SPC_ProdDB.edmx</DependentUpon>
+      <LastGenOutput>SPC_ProdDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SPC_ProdDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SPC_ProdDB.edmx</DependentUpon>
+      <LastGenOutput>SPC_ProdDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

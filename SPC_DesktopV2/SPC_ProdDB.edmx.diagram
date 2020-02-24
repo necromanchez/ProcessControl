@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8b7c9571a5834537bc9c2c54b05564b6" Name="Diagram1">
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.cMC" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.cMCSFG" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.cMCSSP" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.iInspectionDetail" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.iInspectionItem" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mCode" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mImage" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mInspectionMethod" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mInstrument" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mMailRecipient" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mMailSetting" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mProcess" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mProduct" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mSampling" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mSinglePart" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mSupplier" Width="1.5" PointX="2.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mTerminal" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mUser" Width="1.5" PointX="6.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.rDaily" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.rMonthly" Width="1.5" PointX="14.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.rWeekly" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.rYearly" Width="1.5" PointX="12.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.sysdiagram" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.tCoefficient" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.tSigmaTable" Width="1.5" PointX="16.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.xLog" Width="1.5" PointX="16.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.xMCSFGLog" Width="1.5" PointX="8.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.xMCSLog" Width="1.5" PointX="16.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.xMCSSPLog" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.xNCMailLog" Width="1.5" PointX="2.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.InspDetailOLDDB" Width="1.5" PointX="16.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.InspItemOLDDB" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.mImageSAC" Width="1.5" PointX="18.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.SAC_BlankData" Width="1.5" PointX="18.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.SACApproval" Width="1.5" PointX="18.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.temptable" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SPI_SPCSDB_ProdModel.xNCMailTextLog" Width="1.5" PointX="4.75" PointY="20.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

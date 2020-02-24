@@ -1,0 +1,101 @@
+﻿<Window x:Class="SPC_DesktopV2.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPC_DesktopV2.InspectionItem"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Title="Home"  Height="650" Width="1300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="True" Foreground="White">
+
+
+    <Border CornerRadius="35" BorderBrush="#9913C9FF" BorderThickness="5">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF7EE7FF" Offset="0"/>
+                <GradientStop Color="#FFC4E1FF" Offset="1"/>
+                <GradientStop Color="#FFA0E4FF" Offset="0.233"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Margin="96,0,-6,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="292*"/>
+                <RowDefinition Height="19*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="-96,0,0,514">
+                <!---HEADER HERE -->
+                <Image Source="/SPC_DesktopV2;component/Resources/1280px-Shimano_logo.svg.png" Margin="506,61,528,-61"/>
+                <Label FontWeight="Bold" x:Name="PCS" Content="STATISTICAL PROCESS CONTROL SYSTEM"  HorizontalAlignment="Left" Margin="398,148,0,-104" VerticalAlignment="Top" Width="526" FontSize="25"/>
+
+            </Grid>
+            <Grid Margin="0,0,0,19">
+                <!--SIDE-->
+
+                <Border BorderBrush="#9913C9FF" BorderThickness="5" HorizontalAlignment="Left" Margin="246,223,0,231" Width="641" CornerRadius="15,15,0,0">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF89E6FF" Offset="1"/>
+                            <GradientStop Color="#FF001662"/>
+                            <GradientStop Color="#FF47C8E4"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF00ADC9" Margin="342,258,0,0" Width="100" Height="67" Name="InspectionScreen" Click="InspectionScreen_Click">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <Image Source="/SPC_DesktopV2;component/Resources/73292-200.png" Width="113" Height="51" Margin="0,0,10,0"/>
+                    </StackPanel>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Item Inspection</TextBlock>
+                                <TextBlock>Create or Continue inspections.</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF00ADC9" Margin="509,258,0,0" Width="100" Height="67" Name="UploadScreen">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <Image Source="/SPC_DesktopV2;component/Resources/upload-cloud-pngrepo-com.png" Width="81" Height="54" Margin="0,0,10,0"/>
+                    </StackPanel>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Upload CMM</TextBlock>
+                                <TextBlock>Inspection using CMM Upload</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF00ADC9" Margin="675,258,0,0" Width="100" Height="67" Name="LogOffScreen" Click="LogOffScreen_Click">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <Image Source="/SPC_DesktopV2;component/Resources/img_426756.png" Width="80" Height="52" Margin="0,0,10,0"/>
+                    </StackPanel>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Log off</TextBlock>
+                                <TextBlock>Log off or Switch user</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+            </Grid>
+
+
+            <Grid Margin="-96,582,895,0" Grid.RowSpan="2">
+
+                <Image Source="/SPC_DesktopV2;component/Resources/company_logo.png"  Margin="0,0,174,0"/>
+
+                <TextBlock Foreground="Black" TextWrapping="WrapWithOverflow" Margin="232,10,-849,-10">
+Information appearing on Shimano Process Control System intranet application are copyrighted by Seiko IT Solution Philippines Inc. (SITP). Permission to reprint or electronically reproduce any document or graphic in part or in its entirety for any reason other than personal use is expressly prohibited, unless prior written consent is obtained from the SITP Staff and the proper entities."
+                </TextBlock>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

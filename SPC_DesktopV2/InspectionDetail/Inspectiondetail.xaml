@@ -1,0 +1,341 @@
+﻿<Window x:Class="SPC_DesktopV2.InspectionDetail.Inspectiondetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPC_DesktopV2.InspectionDetail"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        
+       Title="RoundWindow" Height="650" Width="1300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="True" Foreground="White">
+
+    <Window.Resources>
+        <Style TargetType="DataGrid">
+
+            <Setter Property="BorderBrush" Value="#DDDDDD" />
+            <Setter Property="HorizontalGridLinesBrush" Value="#DDDDDD" />
+            <Setter Property="VerticalGridLinesBrush" Value="#DDDDDD" />
+
+            <Setter Property="RowStyle">
+                <Setter.Value>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <!-- Highlight a grid row as the mouse passes over -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightCyan" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+
+
+
+    </Window.Resources>
+
+    <Border CornerRadius="35" BorderBrush="#9913C9FF" BorderThickness="5">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF7EE7FF" Offset="0"/>
+                <GradientStop Color="#FFC4E1FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Margin="96,0,-6,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="292*"/>
+                <RowDefinition Height="19*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="-96,0,0,514">
+                <!---HEADER HERE -->
+                <Image Source="/SPC_DesktopV2;component/Resources/1280px-Shimano_logo.svg.png" Margin="10,0,1024,0"/>
+                <Label FontWeight="Bold" x:Name="PCS" Content="STATISTICAL PROCESS CONTROL SYSTEM"  HorizontalAlignment="Left" Margin="380,10,0,0" VerticalAlignment="Top" Width="526" FontSize="25"/>
+                <Ellipse Margin="1057,45,207,10">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/SPC_DesktopV2;component/Resources/user.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Label FontWeight="Bold" x:Name="namecurrentuser" Content="Inspector" HorizontalAlignment="Center" Margin="1089,47,50,0" VerticalAlignment="Top" Width="157" Height="30"/>
+            </Grid>
+            <Grid Margin="0,0,0,19">
+                <!--SIDE-->
+
+                <Border BorderBrush="#9913C9FF" BorderThickness="5" HorizontalAlignment="Left" Height="512" Margin="-96,72,0,0" VerticalAlignment="Top" Width="96" CornerRadius="15,15,0,0">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF89E6FF" Offset="1"/>
+                            <GradientStop Color="#FF001662"/>
+                            <GradientStop Color="#FF47C8E4"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF00ADC9" Margin="-79,151,0,0" Width="61" Height="47" Name="HomeScreen">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <Image Source="/SPC_DesktopV2;component/Resources/588a6758d06f6719692a2d22.png" Width="57" Height="30" Margin="0,0,10,0"/>
+                    </StackPanel>
+
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Home Screen</TextBlock>
+                                <TextBlock>Return to Home Screen.</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFC0F0F7" Margin="-79,215,0,0" Width="61" Height="47" Name="InspectionScreen" Click="InspectionScreen_Click">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <Image Source="/SPC_DesktopV2;component/Resources/73292-200.png" Width="65" Height="30" Margin="0,0,10,0"/>
+                    </StackPanel>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Item Inspection</TextBlock>
+                                <TextBlock>Create or Continue inspections.</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF00ADC9" Margin="-79,279,0,0" Width="61" Height="46" Name="UploadScreen">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <Image Source="/SPC_DesktopV2;component/Resources/upload-cloud-pngrepo-com.png" Width="54" Height="30" Margin="0,0,10,0"/>
+                    </StackPanel>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Upload CMM</TextBlock>
+                                <TextBlock>Inspection using CMM Upload</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF00ADC9" Margin="-79,340,0,0" Width="61" Height="46" Name="LogOffScreen">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <Image Source="/SPC_DesktopV2;component/Resources/img_426756.png" Width="54" Height="30" Margin="0,0,10,0"/>
+                    </StackPanel>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Log off</TextBlock>
+                                <TextBlock>Log off or Switch user</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+            </Grid>
+
+
+            <Grid Margin="30,107,954,276">
+
+                <Label FontWeight="Bold" x:Name="SamplingLabel" Content="Sampling Size" FontSize="20" HorizontalAlignment="Left" Margin="295,20,-268,0" VerticalAlignment="Top" Width="189"/>
+                <Label FontWeight="Bold" x:Name="SamplingSize" Content="8" FontSize="20" HorizontalAlignment="Left" Margin="473,20,-297,0" VerticalAlignment="Top" Width="40" Height="38"/>
+
+                <Label FontWeight="Bold" x:Name="MultipointLabel" Content="Multipoint" FontSize="20" HorizontalAlignment="Left" Margin="295,63,-268,0" VerticalAlignment="Top" Width="189"/>
+                <Label FontWeight="Bold" x:Name="Multipoint" Content="1" FontSize="20" HorizontalAlignment="Left" Margin="473,63,-314,0" VerticalAlignment="Top" Width="57" Height="38"/>
+
+
+                <Label FontWeight="Bold" x:Name="MethodLabel" Content="Method" FontSize="15" HorizontalAlignment="Left" Margin="2,211,0,-31" VerticalAlignment="Top" Width="67" Height="38"/>
+                <Label FontWeight="Bold" x:Name="datain" Content="Data Input" FontSize="15" HorizontalAlignment="Left" Margin="330,208,-210,-28" VerticalAlignment="Top" Width="96" Height="38"/>
+
+                <!--SAC-->
+                <Label FontWeight="Bold" x:Name="SacLsl" Content="SAC LSL" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="66"/>
+                <Label FontWeight="Bold" x:Name="SacUsl" Content="SAC USL" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="66"/>
+                <Label FontWeight="Bold" x:Name="Qty" Content="QUANTITY" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Width="76"/>
+                <Label FontWeight="Bold" x:Name="QU" Content="QUANTITY USED" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="112"/>
+
+                <!--POPULATED-->
+                <TextBox x:Name="SACUSL" HorizontalAlignment="Left" Height="24" Margin="122,8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+                <TextBox x:Name="SACLSL" HorizontalAlignment="Left" Height="24" Margin="122,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+                <TextBox x:Name="Quantity" HorizontalAlignment="Left" Height="24" Margin="122,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+                <TextBox x:Name="QuantityUsed" HorizontalAlignment="Left" Height="24" Margin="122,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+                <Label FontWeight="Bold" x:Name="QU_Copy" Content="SAC START" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="SACStart" HorizontalAlignment="Left" Height="24" Margin="122,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+                <Label FontWeight="Bold" x:Name="QU_Copy1" Content="SAC END" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="SACEnd" HorizontalAlignment="Left" Height="24" Margin="122,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+                <Label FontWeight="Bold" x:Name="QU_Copy2" Content="SAC NUMBER" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="SACno" HorizontalAlignment="Left" Height="24" Margin="122,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+
+                <Grid>
+                    <Border BorderBrush="#9913C9FF" BorderThickness="5" HorizontalAlignment="Left" Height="219" Margin="0,-25,-22,0" VerticalAlignment="Top" Width="238" CornerRadius="15,15,15,15">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF89E6FF" Offset="0.655"/>
+                                <GradientStop Color="#FF001662"/>
+                                <GradientStop Color="#FFDFF8FD"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <Label FontWeight="Bold" x:Name="SACNO" Content="NO SAC" FontSize="45" HorizontalAlignment="Left" Margin="26,47,0,0" VerticalAlignment="Top" Width="189"/>
+
+                </Grid>
+
+
+                <Grid Margin="530,-40,-886,12">
+                    <Border Canvas.Left="55"
+            Canvas.Top="30"
+            Width="100"
+            Height="Auto"
+            Margin="12,12,8,0"
+            VerticalAlignment="Top"
+            BorderBrush="#FF3B5998"
+            BorderThickness=".5"
+            CornerRadius="18">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="5"
+                              Opacity=".5"
+                              ShadowDepth="3" />
+                        </Border.Effect>
+                        <Border Name="ReceiverColor"
+                BorderBrush="#FF96B2E4"
+                BorderThickness="0"
+                CornerRadius="15" Margin="-238,0,-197,0" Height="241">
+                            <Grid>
+                                <Border Name="Mask"
+                        Background="White"
+                        BorderBrush="#FF3B5998"
+                        BorderThickness="0"
+                        CornerRadius="13" Margin="91,0,99,38">
+                                </Border>
+                                <StackPanel Margin="-10,0,-51,-66">
+                                    <StackPanel.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Mask}" />
+                                    </StackPanel.OpacityMask>
+                                    <Image x:Name="Receiver"
+                           Source="/SPC_DesktopV2;component/Resources/no-image-available.jpg" Height="217" Margin="-34,0,44,0" />
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Border>
+                </Grid>
+                <ComboBox x:Name="Method" Margin="74,212,-82,-16" VerticalAlignment="Top" SelectionChanged="MethodSelected"/>
+
+
+
+            </Grid>
+
+
+
+            <DataGrid Name="DatainsertGrid"
+            HorizontalAlignment="Left"
+            Margin="931,347,0,0"
+            VerticalAlignment="Top"
+            Height="153" Width="219" IsReadOnly="True" ColumnWidth="*">
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Judgement}" Value="NC">
+                                <Setter Property="DataGridCell.Background" Value="#E94633" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>
+
+            </DataGrid>
+
+
+            <Button x:Name="btnSave" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF28BF3E" Margin="931,502,0,0" Width="219" Height="49" Click="btnSave_Click">
+                <StackPanel Orientation="Horizontal" Margin="0">
+                    <!--<Image Source="/SPC_DesktopV2;component/Resources/Black+E-bike.png" Width="18" Height="22" Margin="0,0,10,0"/>-->
+                    <TextBlock Foreground="White" FontSize="15"  Height="20" Width="40"><Run Text="SAVE" FontWeight="Black"/></TextBlock>
+                </StackPanel>
+            </Button>
+
+
+            <Grid Margin="-10,290,274,19">
+                <TextBox x:Name="Input" HorizontalAlignment="Left" Height="24" Margin="457,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="InputData"/>
+
+                <DataGrid Name="detailsgrid"
+                HorizontalAlignment="Left"
+                Margin="10,56,0,0"
+                VerticalAlignment="Top"
+                Height="205" ColumnWidth="*" IsReadOnly="True" SelectionChanged="detailsgrid_SelectionChanged">
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Judgement}" Value="NC">
+                                    <Setter Property="DataGridCell.Background" Value="#E94633" />
+                                </DataTrigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="LightCyan"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+
+                    </DataGrid.CellStyle>
+
+
+                </DataGrid>
+
+
+                <Button x:Name="Nextbtn" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF28BF3E" Margin="467,264,0,0"  Width="95" Height="28" Click="Nextbtn_Click">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+
+                        <TextBlock Foreground="White"  Height="17" Width="31"><Run Text="Next" FontWeight="Black"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="Prevbtn" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF28BF3E" Margin="337,264,0,0" Width="95" Height="28" Click="Prevbtn_Click">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+
+                        <TextBlock Foreground="White"  Height="17" Width="51"><Run Text="Previous" FontWeight="Black"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="SetNA" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF28BF3E" Margin="588,28,0,0" Width="58" Height="24" Click="SetNA_Click">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <!--<Image Source="/SPC_DesktopV2;component/Resources/Black+E-bike.png" Width="18" Height="22" Margin="0,0,10,0"/>-->
+                        <TextBlock Foreground="White" FontSize="10"  Height="14" Width="41"><Run Text="SET N/A" FontWeight="Black"/></TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="STARTINSPECT" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF28BF3E" Margin="362,28,0,0" Width="215" Height="23" Click="STARTINSPECT_Click">
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <!--<Image Source="/SPC_DesktopV2;component/Resources/Black+E-bike.png" Width="18" Height="22" Margin="0,0,10,0"/>-->
+                        <TextBlock Foreground="White" FontSize="12"  Height="20" Width="96"><Run Name="insss" Text="START INSPECT" FontWeight="Black"/></TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Grid Margin="362,28,348,240" Name="Attributedata">
+                    <Label FontWeight="Bold" x:Name="ACLabel" Content="AC" FontSize="10" HorizontalAlignment="Left" Margin="-4,0,0,-3" VerticalAlignment="Top" Width="23" Height="23"/>
+                    <TextBox x:Name="ACdata" HorizontalAlignment="Left" Height="20" Margin="17,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" KeyDown="InputData"/>
+
+                    <Label FontWeight="Bold" x:Name="NCLabel" Content="NC" FontSize="10" HorizontalAlignment="Left" Margin="50,0,0,-3" VerticalAlignment="Top" Width="27" Height="23"/>
+                    <TextBox x:Name="NCdata" HorizontalAlignment="Left" Height="20" Margin="75,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32" KeyDown="InputData"/>
+
+                    <Label FontWeight="Bold" x:Name="NALabel" Content="NA" FontSize="10" HorizontalAlignment="Left" Margin="107,0,0,-3" VerticalAlignment="Top" Width="26" Height="23"/>
+                    <TextBox x:Name="NAdata" HorizontalAlignment="Left" Height="20" Margin="130,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32" KeyDown="InputData"/>
+
+                    <Button x:Name="SetDataVisual" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF28BF3E" Margin="167,0,-9,-4" Width="57" Height="24" Click="SetDataVisual_Click">
+                        <StackPanel Orientation="Horizontal" Margin="0">
+                            <!--<Image Source="/SPC_DesktopV2;component/Resources/Black+E-bike.png" Width="18" Height="22" Margin="0,0,10,0"/>-->
+                            <TextBlock Foreground="White" FontSize="10"  Height="14" Width="23"><Run Text="ADD" FontWeight="Black"/></TextBlock>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+
+            </Grid>
+
+
+            <Grid Margin="-96,582,895,0" Grid.RowSpan="2">
+
+                <Image Source="/SPC_DesktopV2;component/Resources/company_logo.png"  Margin="0,0,174,0"/>
+
+                <TextBlock Foreground="Black" TextWrapping="WrapWithOverflow" Margin="232,0,-657,0">
+Information appearing on Shimano Process Control System intranet application are copyrighted by Seiko IT Solution Philippines Inc. (SITP). Permission to reprint or electronically reproduce any document or graphic in part or in its entirety for any reason other than personal use is expressly prohibited, unless prior written consent is obtained from the SITP Staff and the proper entities."
+                </TextBlock>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
